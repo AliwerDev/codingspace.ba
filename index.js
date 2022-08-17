@@ -8,11 +8,12 @@ require("./start/logger")();
 
 require("./start/middleware")(app);
 
-mongoose
-  .connect("mongodb://localhost/codingspace", { useUnifiedTopology: true })
-  .then(() => {
-    winston.debug("success mongodb connect");
-  });
+const mongoURL =
+  "mongodb+srv://vercel-admin-user:nw6x60RgXCAjb3Q1@cluster0.6kysb.mongodb.net/codingspace";
+
+mongoose.connect(mongoURL, { useUnifiedTopology: true }).then(() => {
+  winston.debug("success mongodb connect");
+});
 
 app.listen(5001, () => {
   console.log("5001 port connected successfuly...");
