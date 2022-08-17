@@ -1,0 +1,20 @@
+module.exports.codeTypeEnum = [
+  "JAVASCRIPT",
+  "PYTHON",
+  "JAVA",
+  "C",
+  "C++",
+  "C#",
+  "SWIFT",
+  "KOTLIN",
+  "GO",
+  "PHP",
+  "DART",
+  "TYPESCRIPT",
+  "HTML",
+  "CSS",
+  "SCSS",
+  "LESS",
+  "SASS",
+];
+module.exports.codeSecurity = ["PUBLIC", "PRIVATE"];
