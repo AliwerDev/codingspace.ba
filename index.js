@@ -2,7 +2,6 @@ require("express-async-errors");
 const app = require("express")();
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 5000;
-require("./start/logger")();
 require("./start/middleware")(app);
 
 const mongoURL =

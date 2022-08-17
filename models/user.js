@@ -1,6 +1,13 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
 
+const Test = mongoose.model(
+  "Test",
+  new mongoose.Schema({
+    name: String,
+  })
+);
+
 const userChema = mongoose.Schema({
   username: {
     type: String,
@@ -48,3 +55,4 @@ const validateLogin = (data) => {
 module.exports.User = User;
 module.exports.validate = validate;
 module.exports.validateLogin = validateLogin;
+module.exports.Test = Test;
