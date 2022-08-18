@@ -1,6 +1,5 @@
 module.exports.codeTypeEnum = [
   "JAVASCRIPT",
-  "TYPESCRIPT",
   "HTML",
   "CSS",
   "JAVA",
