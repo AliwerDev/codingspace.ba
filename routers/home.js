@@ -1,11 +1,13 @@
 const { Router } = require("express");
-const { Test } = require("../models/user");
+const { fintQuestion } = require("../pages/dashboard/findQuestion");
 const router = Router();
 
 // categories
 router.get("/", (req, res) => {
   res.send("home page");
 });
+router.get("/:search", fintQuestion);
+
 router.get("/user", (req, res) => {
   res.send("user page");
 });
