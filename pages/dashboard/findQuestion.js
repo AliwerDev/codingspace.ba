@@ -1067,7 +1067,9 @@ const fintQuestion = async (req, res) => {
   ];
   const search = req.params.search;
 
-  const result = data.filter((item) => includes(toLower(item?.quiz), search));
+  const result = data.filter((item) =>
+    includes(toLower(item?.quiz), toLower(search))
+  );
   res.status(200).send(result);
 };
 
