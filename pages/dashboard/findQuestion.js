@@ -3,2364 +3,1313 @@ const { includes, toLower } = require("lodash");
 const fintQuestion = async (req, res) => {
   const data = [
     {
-      id: 1,
-      correct_answer:
-        "A. Dasturlarning to`g`ri ishlashi uchun zarur bo'lgan dasturlash kompleksi",
-      quiz: "Dasturiy ta'minot nima?",
-    },
-    {
-      id: 2,
-      correct_answer:
-        "A. har qanday tabiat ob'ektini tizim sifatida o'rganish metodikasi",
-      quiz: "Tizimli yondashuv nima?",
-    },
-    {
-      id: 3,
-      correct_answer:
-        "A. ishlab chiqiladigan dasturiy ta'minot harakatining to'liq tavsifi",
-      quiz: "Dasturiy ta'minot spetsifikatsiyasi nima?",
-    },
-    {
-      id: 4,
-      correct_answer: "A. barcha javoblar toʻgʻri",
-      quiz: '"Kichik" dasturiy ta\'minotning xususiyatlari qanday?',
-    },
-    {
-      id: 5,
-      correct_answer: "A. barcha javoblar toʻgʻri",
-      quiz: '"Katta" dasturiy ta\'minot qanday xususiyatlarga ega?',
-    },
-    {
-      id: 6,
-      correct_answer: "A. 10 kishi",
-      quiz: "Kichik loyihada qancha odam ishtirok etishi kerak?",
-    },
-    {
-      id: 7,
-      correct_answer: "A. 20 dan 30 kishigacha",
-      quiz: "O'rtacha loyihada qancha odam ishtirok etishi kerak?",
-    },
-    {
-      id: 8,
-      correct_answer: "A. 100 dan 300 kishigacha",
-      quiz: "Katta hajmdagi loyihaga qancha odam jalb qilinishi kerak?",
-    },
-    {
-      id: 9,
-      correct_answer: "A. 1000 dan 3000 kishigacha",
-      quiz: "Gigant loyihada qancha odam ishtirok etishi kerak?",
-    },
-    {
-      id: 10,
-      correct_answer: "A. 3 oydan 6 oygacha",
-      quiz: "Kichik loyihani amalga oshirish muddati qancha?",
-    },
-    {
-      id: 11,
-      correct_answer: "A. 1-2 yil",
-      quiz: "O'rtacha loyihaning muddati qancha?",
-    },
-    {
-      id: 12,
-      correct_answer: "A. 3-5 yil",
-      quiz: "Keng miqyosli loyihani amalga oshirish muddati qancha?",
-    },
-    {
-      id: 13,
-      correct_answer: "A. 10 yilgacha",
-      quiz: "Gigant loyihani amalga oshirish muddati qancha?",
-    },
-    {
-      id: 14,
-      correct_answer:
-        "A. hosil boʻlgan tizimning kerakli xossalarini kafolatlaydigan amaliy yechimlarni olish",
-      quiz: "Abstraksiya va takomillashtirish nima uchun ishlatiladi?",
-    },
-    {
-      id: 15,
-      correct_answer:
-        "A. Dasturiy ta'minotni yaratish zarurligi to'g'risida qaror qabul qilingan paytdan boshlab toki uni foydalanishdan to'liq olib tashlangan vaqt oralig'idagi vaqt davri.",
-      quiz: "Hayot sikli nima?",
+      quiz: "Assembler dasturlash tili qanday dasturlash tilllari oilasiga kiradi?",
+      correct_answer: "quyi darajalik",
     },
     {
-      id: 16,
-      correct_answer:
-        "A. dasturiy taʼminot komponentlarini oʻz ichiga olgan dastur tuzilmasi, bu komponentlarning tashqi koʻrinadigan xossalari va ular oʻrtasidagi bogʻliqlik.",
-      quiz: "Dasturiy ta'minot arxitekturasi nima?",
+      quiz: "Fortran dasturlash tili qanday dasturlash tilllari oilasiga kiradi?",
+      correct_answer: "quyi darajalik",
     },
     {
-      id: 17,
-      correct_answer:
-        "A. modul interfeysi aynan shu modul foydalanuvchilari uchun zarur bo'lgan vazifalarni hal qilish imkonini beradi",
-      quiz: "Interfeys mosligi nima?",
+      quiz: "Fortran dasturlash tili nechanchi yilda kim tomonidan ishlab chiqilgan?",
+      correct_answer: "1954 yilda Jon Bekus tomonidan",
     },
     {
-      id: 18,
-      correct_answer:
-        "A. interfeys modul funksionalligi doirasidagi barcha muhim bo'lgan vazifalarni hal qilishga imkon beradi",
-      quiz: "Interfeys to'liqligi nima?",
+      quiz: "Ilmiy-texnik sohada �Paradigma� atamasi kim tomonidan birinchi b?�lib kiritilgan?",
+      correct_answer: "1962 yilda Tomas Kun tomonidan",
     },
     {
-      id: 19,
-      correct_answer:
-        "A. interfeys tomonidan taqdim etiladigan operatsiyalar o'z ma'nosiga ko'ra har xil bo'lgan vazifalarni hal qiladi va ularning hech biri boshqalarning yordami bilan amalga oshirilmaydi.",
-      quiz: "Interfeys minimalligi nima?",
+      quiz: "Dasturlash paradigmasi kim tomonidan birinchi b?�lib kiritilgan?",
+      correct_answer: "1978 yilda Robert Floyd tomonidan",
     },
     {
-      id: 20,
+      quiz: "Dasturlash paradigmasi � ...",
       correct_answer:
-        "A. interfeys operatsiyalari etarlicha elementar bo‘lib, ularni bir xil abstraksiya darajasidagi, shungdek, modul funksionallik darajasi bir xil bo'lgan ba’zi oddiyroq amallar kompozitsiyasi sifatida tasvirlab bo‘lmaydi.",
-      quiz: "Interfeys oddiyligi nima?",
-    },
-    {
-      id: 21,
-      correct_answer: "",
-      quiz: "Hayotiy siklda qanday modellar mavjud?a. kaskad, oraliq nazoratli model va spiral",
+        "kompyuter dasturlarini yozish uslubini belgilaydigan g�oyalar va tushunchalar t?�plami",
     },
     {
-      id: 22,
+      quiz: "Dasturlash paradigmasi � ...",
       correct_answer:
-        "A. maqsadli hisoblash tizimiga dasturiy ta'minotni joylashtirish va foydalanuvchilarni o'qitish",
-      quiz: "DTni ishga tushirish nima?",
+        "dasturlarni yozish uslubini belgilaydigan g�oyalar va tushunchalar t?�plami, dasturlashga yondoshish",
     },
     {
-      id: 23,
+      quiz: "Tomas Kun paradigmalarni ...",
       correct_answer:
-        "A. amaliy masalalarni yechish uchun kompyuterda uning dasturlarini bajarish orqali turli dasturiy ta'minotlardan foydalanish",
-      quiz: "Dasturiy ta'minotdan foydalanish nima?",
+        "tadqiqotlar olib boriladigan aniq ilmiy qarashlar tizimlari deb atagan",
     },
     {
-      id: 24,
+      quiz: "Paradigma s?�zi dasturlashda ...",
       correct_answer:
-        "A. Amaldagi dasturiy ta'minotning sifati haqida ma'lumot to'plash, unda aniqlangan xatolarni bartaraf etish, uni takomillashtirish va o'zgartirish, shuningdek, unga kiritilgan o'zgartirishlar haqida foydalanuvchilarni xabardor qilish jarayoni.",
-      quiz: "Dasturiy ta'minotni kuzatib borish nima?",
+        "dasturlarni amalga oshirishning umumiy usulini (texnikasini) taqsimlaydigan belgilar oilasini aniqlash uchun ishlatiladi.",
     },
     {
-      id: 25,
+      quiz: "Kompyuterli dasturlash hamda umumiy dasturiy paradigmalari � ...",
       correct_answer:
-        "A. mijoz nimalarni taqdim qilishi mumkin, manbalar qanchalik yetarli va qaysi bosqichlar tugallangan, shunga qarab ish hajmi, byudjeti va muddatlari aniqlanadi.",
-      quiz: "Loyihalashga tayyorgarlik ko'rilayotganda qanday tashkiliy masalalar hal qilinadi?",
+        "amaliy, nazariy va funksional dasturlash paradigmalaridan iborat",
     },
     {
-      id: 26,
+      quiz: "Amaliy dasturlash � bu ...",
       correct_answer:
-        "A. mijozning birgalikdagi ishi (mahsulotning afzalliklari, ishlashi va tashqi ko'rinishiga qo'yiladigan talablar haqida bo'ladi) va EDISON-loyihachi (texnik va algoritmik echimlarni taklif qiladi)",
-      quiz: 'Loyihalash bosqichining "tasnif" bo\'limida nima qilinadi?',
+        "kompyuterlar paydo b?�lishidan ancha oldin ?�rganilgan axborotni hisoblash va raqamlarni qayta ishlashning hisoblash jarayonlarini aks ettiradigan muammoli y?�nalishlarga b?�ysunadi",
     },
     {
-      id: 27,
+      quiz: "Nazariy dasturlash  � bu ...",
       correct_answer:
-        "A. dasturlash tili, ma'lumotlar bazasi, serverlar va freymvorklar tasdiqlanadi",
-      quiz: 'Loyihalash bosqichining "Arxitektura" bo\'limida nima qilinadi?',
+        "ilmiy nashrlarda taqdim etilgan dasturlash va informatika sohasidagi ilmiy tajribalar natijalarining aniqligi va taqqoslanishiga qaratilgan",
     },
     {
-      id: 28,
+      quiz: "Applikativ dasturlash � bu ...",
       correct_answer:
-        "A. DT tavsifiga va buyurtmachining savollarga bergan javoblari asosida arxitektor tomonidan tuziladi, loyiha rahbari bilan kelishiladi, soʻngra mijozga ko'rsatiladi, tuzatishlar kiritiladi.",
-      quiz: 'loyihalashtirish bosqichining "Texnik topshiriq" bo\'limida nimalar qilinadi?',
+        "deklarativ dasturlashning bir turi b?�lib, unda dastur yozish bir obyektni boshqasiga tizimli ravishda q?�llashdan iborat",
     },
     {
-      id: 29,
+      quiz: "Eksperimental dasturlash �",
       correct_answer:
-        "A. Interfeyslarni, qurilmaning sxematik diagrammalarini, ma'lumotlar bazasi strukturasi sxemalarini, komponentlarning o'zaro ta'siri diagrammalarini tuziladi.",
-      quiz: "Loyihalash bosqichining “Maketlar (texnik topshiriqlarga qo‘shilgan)” bo'limida nimalar amalga oshiriladi?",
+        "tizimli dasturlash masalalarini, sun�iy intellektni ?�rganish va informatikada yangi inovatsion texnologiyalarni rivojlantirishda shakllandi",
     },
     {
-      id: 30,
+      quiz: "Dasturlash tili � ...",
       correct_answer:
-        "A. arxitektor loyiha rahbarining ko'rsatgan kamchiliklariga tuzatishlar kiritadi",
-      quiz: 'Loyihalash bosqichining "Nazorat" bo\'limida nima qilinadi?',
+        "kompyuter dasturlarini yozish uchun rasmiy til xisoblanadi",
     },
     {
-      id: 31,
+      quiz: "Kompyuterda dasturlash � bu ...",
       correct_answer:
-        "A. mijoz Texnik topshiriqni mustaqil ravishda tekshiradi va o'zgartiradi yoki kamchiliklar ro'yxatini loyiha rahbariga beradi, kamchiliklar tuzatiladi, Texnik topshiriq tasdiqlanadi va shartnomaga ilova qilinadi.",
-      quiz: 'Loyihalash bosqichining "Tasdiqlash" bo\'limida nima qilinadi?',
-    },
-    {
-      id: 32,
-      correct_answer: "A. tuzilmaviy dasturlash",
-      quiz: 'Qanday dasturlash yondashuvida biz odatda "yuqoridan pastga" iborasi ishlatiladi?',
+        "kompyuter mikroprotsessori uchun turli buyruqlar berish, qachon, qayerda nimani ?�zgartirish va nimalarni kiritish yoki chiqarish haqida buyruqlar berishdir",
     },
     {
-      id: 33,
-      correct_answer: "A. shartsiz sakrash",
-      quiz: "Qaysi shartni tuzilmaviy dasturlash rioya qilmaydi?",
+      quiz: "Dasturlash tillari �",
+      correct_answer: "quyi va yuqori darajali dasturlash tillariga b?�linadi",
     },
     {
-      id: 34,
+      quiz: "Dasturlash tizimlariga �",
       correct_answer:
-        "A. modullarning zaif avtonom sozlanishi, stub dasturlarning (программ-заглушек) mavjudligi",
-      quiz: "Tuzilmaviy dasturlashning kamchiliklari?",
+        "translyatorlar, kutubxona dasturlari, redaktorlar, kompanovshiklar, zagr?�zchiklar va otladchiklar kiradi",
     },
     {
-      id: 35,
+      quiz: "Dasturlash tizimlari �",
       correct_answer:
-        "A. yaxshi kompleks sozlash imkoniyati ega, mijoz loyihalashda ishtirok etadi, oraliq natijalar mijozga ko'rsatilishi mumkin.",
-      quiz: "Tuzilmaviy dasturlashning afzalliklari?",
-    },
-    {
-      id: 36,
-      correct_answer: "A. tuzilmaviy dasturlash",
-      quiz: 'Qaysi dasturlashda "sendvich" usuli odatda oddiy loyihalar uchun qo\'llaniladi?',
-    },
-    {
-      id: 37,
-      correct_answer: "A. goto",
-      quiz: "Qaysi biri shartsiz o'tish operatori?",
-    },
-    {
-      id: 38,
-      correct_answer: "A. break",
-      quiz: "Qaysi biri sikldan chiqish operatori?",
-    },
-    {
-      id: 39,
-      correct_answer: "A. continue",
-      quiz: "Qaysi biri siklning keyingi iteratsiyasiga o'tish operatori hisoblanadi?",
+        "til muammolarini xal qiluvchi dasturlarni birlashtiradilar va dasturiy ta�minotni ishlab chikarishga m?�ljallangan",
     },
     {
-      id: 40,
-      correct_answer: "A. return",
-      quiz: "Qaysi biri funktsiyani qaytarish operatori hisoblanadi?",
-    },
-    {
-      id: 41,
+      quiz: "Dasturlarga xizmat k?�rsatuvchi tizimlar � ...",
       correct_answer:
-        "A. dastur yoki hisoblash tizimining eng yuqori kontseptual darajada ishlashini belgilovchi tuzilmasi, shu jumladan apparat va dasturiy ta'minot komponentlari, ushbu komponentlarning tashqi xususiyatlaridan ko'rinadigan, ular o'rtasidagi munosabatlar, shuningdek, tizimni hujjatlashtirish.",
-      quiz: "Arxitektura nima?",
+        "maxsus servis dasturlar b?�lib, ular yordamida operatsion tizimni ?�ziga xizmat k?�rsatish mumkin",
     },
     {
-      id: 42,
+      quiz: "Translyator � bu ...",
       correct_answer:
-        "A. butun tizimni, shuningdek, uning alohida qismlarini loyihalashtiradi",
-      quiz: "Tizim arxitektori nima qiladi?",
+        "dastur b?�lib, berilgan dasturlash tilidagi kiruvchi dastur matnini unga ekvivalent b?�lgan chiqishdagi natijaviy tilga ?�giradi",
     },
     {
-      id: 43,
+      quiz: "Kompilyator � bu ...",
       correct_answer:
-        "A. maʼlumotlar bazasi va uning strukturasini loyihalash bilan shugʻullanadi",
-      quiz: "Ma'lumotlar bazasi arxitektori nima qiladi?",
-    },
-    {
-      id: 44,
-      correct_answer: "A. loyihalashda qatnashadi, hujjatlarni tayyorlaydi",
-      quiz: "Tizim tahlilchisi nima qiladi?",
-    },
-    {
-      id: 45,
-      correct_answer: "A. tizimning apparat qismini loyihalashda qatnashadi",
-      quiz: "Administratorlar kimlar?",
+        "translyator b?�lib, u berilgan dastur mantnini unga ekvivalent b?�lgan mashina komandalaridagi obyekt dasturga ?�giradi",
     },
     {
-      id: 80,
+      quiz: "Interpretator � bu ...",
       correct_answer:
-        "A. algoritm chekli sonli elementar amallardan iborat boʻladi",
-      quiz: "Algoritmning diskretlik xususiyati deganda nima tushuniladi?",
+        "dastur b?�lib, u berilgan dastur matnini birdaniga qabul qiladi va bajaradi (natijaviy kodi b?�lmaydi)",
     },
     {
-      id: 46,
+      quiz: "Kompilyator formal tillar nuqtai nazaridan qanday funksiyalarni bajaradi?",
       correct_answer:
-        "A. Buyurtmachining arizani amalga oshirishdan tipik kutishlari: turli harakatlarni bajarish uchun sarflangan vaqtni qisqartirish; turli operatsiyalarni bajarishni tezlashtirish; jarayonlarni avtomatlashtirish; turli xil o'lchovlarni yaxshilash - tizim, tarmoq yoki jarayonning resurslar, odatda apparat qo'shilganda ish yukining ortishi (uning unumdorligini oshirish) bilan kurashish qobiliyati",
-      quiz: "Jarayonlarning unumdorligini yaxshilash va oshirish deganda nima tushuniladi?",
+        "kiruvchi dastur matni tili uchun anglovchi xisoblanadi va natijaviy dastur tili uchun generator xisoblanadi",
     },
     {
-      id: 47,
+      quiz: "Leksik tahlil � bu ...",
       correct_answer:
-        "A. loyihalash maqsadlaridan biri har qanday harakatni bajarish uchun zarur bo'lgan xarajatlarni kamaytirish bo'lishi mumkin. Bu jarayonlarning unumdorligini oshirish orqali ham, operatsiyalarni bajarishni tezlashtirish orqali ham amalga oshirilishi mumkin.",
-      quiz: "Xarajatlarni kamaytirish deganda nima tushuniladi?",
+        "kompilyator b?�lagi b?�lib, dastur literalarini ?�kiydi  va ular orqali kiruvchi til leksemalarini k?�radi",
     },
     {
-      id: 48,
+      quiz: "Sintaktik tahlil � bu ...",
       correct_answer:
-        "A. Operatsion faoliyat odatda odatiy tipik operatsiyalarni bajarish bilan bog'liq (masalan, do'konda kassir bo'lib ishlash, kommunal to'lovlarni qabul qilish va hokazo). Bunday operatsion faoliyatni avtomatlashtirish (soddalashtirish, tezlashtirish) orqali siz xarajatlarni kamaytirishingiz yoki tizim ish faoliyatini oshirishingiz mumkin.",
-      quiz: "Operatsion faoliyat yaxshilash deganda nima tushuniladi?",
+        "tahlil bosqichidagi kompilyatorning asosiy b?�lagidir. Tilning sintaktik konstruksiyalarini ajratadi",
     },
     {
-      id: 49,
+      quiz: "Semantik tahlil � bu ...",
       correct_answer:
-        "A. Arxitektura yechimi boshqaruv samaradorligini oshirishga qaratilgan bo‘lishi mumkin, masalan, korxonada ish jarayonini avtomatlashtirish (qog‘oz hujjatlardan elektron hujjatlarga o‘zgartirishlar tarixini kuzatish, bildirishnomalar va boshqalarga o‘tish).",
-      quiz: "Boshqaruv samaradorligini oshirish deganda nima tushuniladi?",
+        "kompilyator b?�lagi b?�lib, kiruvchi til semantikasi nuqtai nazaridan dastur matnini tekshiradi",
     },
     {
-      id: 50,
+      quiz: "Kodni generatsiyalashga tayyorgarlik �",
       correct_answer:
-        "A. Har qanday faoliyat ma'lum xatarlar bilan bog'liq. Ilovalarni ishlab chiqish maqsadlaridan biri ularni kamaytirish bo'lishi mumkin. Masalan, moliyaviy operatsiyalar uchun ikki tomonlama imzo qoidasi (bir xodim tomonidan tuzilgan moliyaviy operatsiya boshqa xodim tomonidan tasdiqlanishi va imzolanishi kerak bo'lganda).",
-      quiz: "Xatarlarni kamaytirish deganda nima tushuniladi?",
+        "natijaviy dasturning sintezi bilan bog�lik b?�lgan xarakatlarga tayyorgarlik bajariladi",
     },
     {
-      id: 51,
+      quiz: "Kodni genaratsiyalash �",
       correct_answer:
-        "A. Ko'pgina korxonalar bir nechta tizimlardan foydalanadi, ular o'rtasida ma'lumot almashish kerak. Dasturiy ta'minotni ishlab chiqish ushbu almashinuvni avtomatlashtirish va soddalashtirishga qaratilgan bo'lishi mumkin (uni \"shaffof\", oxirgi foydalanuvchilar uchun oddiyroq qilish).",
-      quiz: "O'zaro munosabatlarning imkoniyati va shaffofligini oshirish?",
+        "natijaviy kodni bevosita xosil etish � kodni optimizatsiyalashni ?�z ichiga olgan asosiy faza",
     },
     {
-      id: 52,
+      quiz: "Identifikatorlar jadvali �",
       correct_answer:
-        "A. DTning hayot sikli bilan bog'liq jarayonlar avtomatlashtirishning maqsadi ham bo'lishi mumkin, chunki DTning hayot siklida amalga oshiriladigan xarajatlarni kamaytirish qo'shimcha foyda keltiradi.",
-      quiz: 'Hayotiy siklni "qo\'llab-quvvatlash" xarajatlarini kamaytirish nima?',
+        "kiruvchi dastur elementlari xaqidagi ma�lumotlarni saqlovchi berilganlar t?�plami",
     },
     {
-      id: 53,
+      quiz: "?�tish � bu ...",
       correct_answer:
-        "A. ilovalar xavfsizligi oshirish yildan-yilga muhim ahamiyat kasb etmoqda",
-      quiz: "Xavfsizlik samaradorligini oshirish nima?",
+        "tashqi xotiradan berilganlarni oxirgi ?�kish jarayoni, ularni qayta ishlash va tashqi xotiraga joylashtirish",
     },
     {
-      id: 54,
+      quiz: "Assembler � bu ...",
       correct_answer:
-        "A. dasturda yuzaga keladigan turli jarayonlarga ishlab chiquvchining aralashuvisiz ta'sir qilish.",
-      quiz: "Boshqarish qobiliyati nima?",
+        "tizimli qayta ishlovchi dastur b?�lib, u biron bir mashinaga m?�ljallangan dasturlash tilida yozilgan dastur matnini obyekt kodiga aylantirish uchun m?�ljallangan",
     },
     {
-      id: 55,
-      correct_answer:
-        "A. Aniq maqsadlarga ega bo'lish arxitekturaga e'tiborni qaratishga va hal qilish uchun muammolarni to'g'ri tanlashga yordam beradi. Aniq belgilangan maqsadlar har bir bosqichning chegaralarini aniqlashga yordam beradi, ya'nijoriy bosqich tugallangan va hamma narsa keyingi bosqichga o'tishga tayyor bo'lgan payt.",
-      quiz: "Arxitekturaning maqsadlarini aniqlash?",
+      quiz: "Assembler tilidagi matn nimalardan tashkil topgan?",
+      correct_answer: "direktivalar va ismlardan tashqil topadi",
     },
     {
-      id: 56,
+      quiz: "Yuklovchilar ...",
       correct_answer:
-        "A. Asosiy ssenariylardan birlamchi ahamiyatga ega bo'lgan narsaga e'tibor qaratish va ushbu stsenariylarga mos bo’lgan turlicha arxitektura variantlarni sinab ko'rishda foydalanishi lozim.",
-      quiz: "Asosiy ssenariylar qanday aniqlanadi?",
+        "dasturni qayta ishlovchi dasturga yuklaydilar va unga boshqaruvni uzatadilar",
     },
     {
-      id: 57,
+      quiz: "Yuklovchilar ...",
       correct_answer:
-        "A. Yaratilayotgan ilovaning ishlashi loyihaning real sharoitlarga mos kelishini ta'minlash uchun dastur turini, arxitektura joylashuvini, arxitektura uslublarini va texnologiyalarini aniqlash kerak.",
-      quiz: "Ilova prototipini yaratish nima?",
+        "yuklovchilarni bog�lovchi alohida modullarni birlashtiradilar",
     },
     {
-      id: 58,
-      correct_answer:
-        "A. Sifat parametrlari va end-to-end funksionalligi zaruriyati asosida asosiy muammoli sohalarni belgilash zarur. Ilovani loyihalashda ko'pincha xatolarga yo'l qo'yiladigan joylar shulardir.",
-      quiz: "Potentsial muammolarni aniqlash?",
+      quiz: "Yuklovchilar qanday b?�lishi mumkin?",
+      correct_answer: "joy ?�zgartiruvchi yoki absolyut",
     },
     {
-      id: 59,
+      quiz: "Absolyut yuklovchilar �",
       correct_answer:
-        'A. Har bir iteratsiyada arxitekturaning "uchuvchisi" yoki prototipi yaratilishi kerak, bu avvalgi yechimning rivojlanishi va takomillashtirilishi hisoblanadi. Keyingi iteratsiyaga o\'tishdan oldin, ushbu prototip asosiy stsenariylarga, muammolarga va joylashtirishning cheklovlariga javob berishiga ishonch hosil qilish kerak.',
-      quiz: "Yechim variantlarini aniqlash deganda nima tushuniladi?",
-    },
-    {
-      id: 60,
-      correct_answer: "A. klassik ish stoli ilovalari",
-      quiz: 'Qanday ilovalar "oynali" ilovalar deb ataladi?',
-    },
-    {
-      id: 61,
-      correct_answer: "A.5A. konsol ilovalari",
-      quiz: "Ilovalarning nechta turi mavjud?A.5B.3C.4D.8Qaysi dastur faqat matnli ma'lumotlarni ko'rsatadi?",
+        "xar bir dasturni bittadan fiksirlangan adres b?�yicha yuklaydilar",
     },
     {
-      id: 62,
+      quiz: "Joy ?�zgartiruvchi yuklovchilar �",
       correct_answer:
-        "A. Komponentlar odatda turli ilovalarda turli vaziyatlarda qayta foydalanish uchun mo‘ljallangan",
-      quiz: "Komponentlardan qayta foydalanish nima?",
+        "dasturni xotiradagi ixtiyoriy b?�sh joyga joylashtirishlari mumkin",
     },
     {
-      id: 63,
+      quiz: "Mikroprotsessorlar � bu ...",
       correct_answer:
-        "A. Komponentlarni boshqa shunga o'xshash komponentlar bilan erkin almashtirish mumkin",
-      quiz: "O'zgartiriladigan komponenta nima?",
+        "belgili qayta ishlashga m?�ljallangan b?�lib, bu jarayonda mikrochaqiriqlarga mikrokengaytmalar mos q?�yiladi",
     },
     {
-      id: 64,
-      correct_answer:
-        "A. komponentlari turli muhit va sharoitlarda ishlashga moʻljallanganligi",
-      quiz: "Kontekstdan mustaqil komponentlarning xususiyatlari qanday bo’ladi?",
+      quiz: "Mikroprotsessorning kirishida �",
+      correct_answer: "mikrochaqiriqlardan olingan matn b?�ladi",
     },
     {
-      id: 65,
-      correct_answer:
-        "A. Yangi xatti-harakatni ta'minlash uchun komponent mavjud komponentlar orqali kengaytirilishi mumkin.",
-      quiz: "Kengaytiriladigan komponent nima?",
+      quiz: "Mikroprotsessorning chiqishida �",
+      correct_answer: "mikrokengaytmalar b?�ladi",
     },
     {
-      id: 66,
-      correct_answer:
-        "A. AA komponentiga murojat qilgan tomonga o'z funksiyalaridan foydalanish imkonini beruvchi interfeyslarni ochib beradi va ichki jarayonlar yoki har qanday ichki o'zgaruvchilar yoki holat tafsilotlarini oshkor qilmaydi.",
-      quiz: "inkapulyasiyalangan komponent nima?",
+      quiz: "Translyatorlar � ...",
+      correct_answer: "bir tilda yozilgan matnni boshqa tilga ?�giradilar",
     },
     {
-      id: 67,
+      quiz: "Translyatorlarda �",
       correct_answer:
-        "A. Komponentlar boshqa komponentlarga minimal bog‘liqlikka ega bo‘lishi mumkin",
-      quiz: "Mustaqil komponent nima?",
+        "obyekt kodi aloqa redaktorining kirishiga yoki yuklovchining kirishiga kelib tushadi",
     },
     {
-      id: 68,
+      quiz: "Aloqa redaktorlari � bu ...",
       correct_answer:
-        "A. murakkab masala yoki tuzilmaning mohiyatini ahamiyatsiz tafsilotlarga qaratmasdan tavsiflovchi abstraksiya.",
-      quiz: "Model nima?",
+        "tizimli qayta ishlovchi dastur b?�lib, assembler yordamida alohida olingan obyekt modullarini yagona modulga birlashtirishga m?�ljallangan",
     },
     {
-      id: 69,
+      quiz: "Aloqa redaktori chegarasida .....",
       correct_answer:
-        "A. murakkab narsalarni tushunish imkonini beruvchi insonning asosiy qobiliyatlaridan biri",
-      quiz: "Abstraksiya nima?",
+        "barcha adres y?�nalishlari yagona adreslar fazosiga ?�rnatiladi",
     },
     {
-      id: 70,
+      quiz: "Translyatorlarni quyidagi k?�rinishlarini ajratib k?�rsatish mumkin:",
       correct_answer:
-        "A. bu modellashtirishning asosiy tushunchasi va ularning semantikasi",
-      quiz: "Model elementlari nima?",
-    },
-    {
-      id: 71,
-      correct_answer: "A. bu modellashtirish elementlarining vizual tasviridir",
-      quiz: "Notasiya nima?",
+        "kompilyatorlar, kirishida yuqori daraja tilida yozilgan dastur matni, chiqishida mashina kodlaridagi aloqa redaktoriga yoki yuklovchiga uzatiladigan dastur",
     },
     {
-      id: 72,
+      quiz: "Translyatorlarni xususiyatlari:",
       correct_answer:
-        "A. muayyan dasturiy modellarni yaratish doirasida elementlardan foydalanish qoidalari",
-      quiz: "Foydalanish bo'yicha qo'llanma nima?",
+        "tarjima funksiyalarini aniq b?�linishi va tarjima qilingan funksiyalarini bajarilishi",
     },
     {
-      id: 73,
-      correct_answer: "",
-      quiz: "Kontseptual ma'lumotlar modeli nima?a. ushbu ma'lumotlar modeli tizimda NIMALARNI o'z ichiga olganligini aniqlaydi. Ushbu model odatda manfaatdor tomonlar va ma'lumotlar arxitektorlari tomonidan yaratiladi.",
-    },
-    {
-      id: 74,
+      quiz: "Interpretatorlar �",
       correct_answer:
-        "A. tizimni MBBTdan mustaqil ravishda QANDAY amalga oshirish kerakligini belgilaydi. Ushbu model odatda ma'lumotlar arxitektorlari va biznes tahlilchilari tomonidan yaratiladi.",
-      quiz: "Mantiqiy ma'lumotlar modeli nima?",
+        "tarjimani va bajarilishni qatorlab va kooperativ bajaradi",
     },
     {
-      id: 75,
+      quiz: "Til konvertorlari � bu",
       correct_answer:
-        "A. Ushbu ma'lumotlar modeli tizimning ma'lum bir MBBT tizimi yordamida qanday amalga oshirilishini tavsiflaydi. Ushbu model odatda ma’lumotlar bazasi admini va ishlab chiquvchilar tomonidan yaratiladi",
-      quiz: "Jismoniy ma'lumotlar modeli nima?",
-    },
-    {
-      id: 76,
-      correct_answer: "A. noaniqlik",
-      quiz: "Qahvaga 2-3 osh qoshiq shakar qo'shing. Algoritmning qaysi xossasi buzilgan?",
-    },
-    {
-      id: 77,
-      correct_answer: "A. tushunarlilik",
-      quiz: "2x2 matritsaning determinantini toping. Algoritmning qaysi xossasi buzilgan?",
-    },
-    {
-      id: 78,
-      correct_answer: "A. natijaviylik",
-      quiz: "Idishlarni iflos gubka bilan yuving. Algoritmning qaysi xossasi buzilgan?",
-    },
-    {
-      id: 79,
-      correct_answer: "A. diskretlik",
-      quiz: "Algoritmning qaysi xossasi buzilgan: osh pishiraymi?",
-    },
-    {
-      id: 81,
-      correct_answer: "A. harakatlarning har biri to‘liq tugallangan bo’aladi",
-      quiz: "Algoritmning tushunarlilik xususiyati deganda nima tushuniladi?",
+        "bir yuqori daraja dasturlash tilida yozilgan dastur matnini boshqa yukori daraja dasturlash tiliga aylantirish uchun m?�ljallangan",
     },
     {
-      id: 82,
+      quiz: "Matn redaktorlari ....",
       correct_answer:
-        "A. har bir harakat qat’iy belgilangan ma’noda tushuniladi",
-      quiz: "Algoritmning yagonalik xossasi deganda nima tushuniladi?",
+        "mantni qayta ishlash uchun keng imkoniyatlarga egaliklari bilan farqlanadilar",
     },
     {
-      id: 83,
+      quiz: "Dizassembler � ...",
       correct_answer:
-        "A. bu algoritmga koʻra bir emas, balki oʻxshash bo’lgan bir sinf masalalar yechilishi kerak",
-      quiz: "Algoritmning ommaviylik xossasi deganda nima tushuniladi?",
+        "mashina kodlari ketma-ketligini assembler k?�rinishiga ?�zgartiradigan dastur",
     },
     {
-      id: 84,
+      quiz: "Dizassembler � bu ...",
       correct_answer:
-        "A. algoritm va har bir qadam muayyan natijaga olib kelishi kerak",
-      quiz: "Algoritmning natijaviylik xususiyati deganda nima tushuniladi?",
-    },
-    {
-      id: 85,
-      correct_answer: "A. algoritm chekli sonli bosqichlarda boʻlishi kerak",
-      quiz: "Algoritmning cheklilik xossasi deganda nima tushuniladi?",
+        "loyixalashtirilayotgan xisoblash tizimlari arxitekturasini otladka kilish uchun foydalaniladi",
     },
     {
-      id: 86,
+      quiz: "Kross-tizim � bu ...",
       correct_answer:
-        "A. Loyihaning mohiyati, maqsadlari va ko‘lamini aniq bayon qilishni, shuningdek, loyihaning barcha yakuniy mahsulotini ularning xususiyatlari bilan belgilashni nazarda tutadi.",
-      quiz: "Loyiha ta'rifi?",
+        "dastur bir xisoblash mashinasida mashina kodlarida ifodalangan boshqa bir xisoblash mashinasining dasturlarini olish uchun q?�llaniladi",
     },
     {
-      id: 87,
+      quiz: "Kutubxonalar � bu ...",
       correct_answer:
-        "A. rejaning turli darajadagi tafsilotlari ko'rib chiqiladi va struktura elementlari darajalarining optimal soni aniqlanadi",
-      quiz: "detallashtirish darajasi?",
-    },
-    {
-      id: 88,
-      correct_answer: "A. Loyihaning hayotiy sikli ishlab chiqilishi",
-      quiz: "Jarayon tuzilishi nima?",
+        "kiritilayotgan matn, obyekt moduli raqami b?�lishi mumkin b?�lgan kutubxona fayllarini tashkil etish va ularga xizmat k?�rsatish uchun dasturlar",
     },
     {
-      id: 89,
+      quiz: "Dasturlarning hayot davri nima?",
       correct_answer:
-        "A. loyihaga jalb qilingan barcha ishtirokchilar guruhlari yoki alohida ishtirokchilarni, shu jumladan loyihani amalga oshirishdan manfaatdor bo‘lgan tashqi muhitni qamrab olgan",
-      quiz: "Tashkiliy tuzilma nima?",
+        "dasturni yaratish zarurligi t?�g�risida qarar qabul qilingan vaqtdan boshlab, ?�z faoliyatining yakunigacha b?�lgan uzluksiz jarayon tushuniladi",
     },
     {
-      id: 90,
+      quiz: "Dasturning hayot sikli bosqichlari nima?",
       correct_answer:
-        "A. Yakuniy mahsulotni quyi tizimlar yoki tarkibiy qismlar bo'yicha taqsimlash diagrammasi, shu jumladan moddiy ta'minot, dasturiy ta'minot, axborot bilan ta'minlash, xizmat ko'rsatish, agar kerak bo'lsa, hududiy taqsimlash.",
-      quiz: "Mahsulot tuzilmasi nima?",
+        "dastur bosib ?�tishi lozim b?�lgan jarayonlarni dasturning hayot sikli bosqichlari deyiladi",
     },
     {
-      id: 91,
+      quiz: "Dasturning hayot davrining dasturlashdan oldingi tahlili bosqichida....",
       correct_answer:
-        "A. loyihani tuzishda foydalaniladigan kodlar tizimini ishlab chiqish nazarda tutiladi",
-      quiz: "Tashkilotning buxgalteriya tizimi nima?",
+        "dastur taqdim etish m?�ljallangan obyektning funksional va axborot modelini formatlash bajariladi",
     },
     {
-      id: 92,
+      quiz: "Dasturning hayot davrining loyihalash bosqichida....",
       correct_answer:
-        "A. Tanqidiy yo'lni topish jarayonida yanada detallashtirish yo’li ko’rsatiladi.",
-      quiz: "Loyihaning bosh rejasi nima?",
+        "texnik topshiriqni, eskiz va texnik loyihalarni ishlab chiqiladi",
     },
     {
-      id: 93,
+      quiz: "Dasturning hayot davrining Dasturni ishlab chiqish bosqichida....",
       correct_answer:
-        "A. Loyiha tuzilmasi elementlari va tashkiliy tuzilma o'rtasidagi munosabatlarni tahlil qilish natijasida matritsa quriladi, unda loyiha tuzilmasi elementlari qatorlarga aylanadi va kompaniyaning tashkiliy tuzilmasi elementlari ustunlarga aylanadi.",
-      quiz: "Mas'uliyatni taqsimlash matritsasi?",
+        "dasturlash bosqichida ajratilgan tizimostilarning dasturviy spetsifikatsiyasi asosida dasturlash va amaliy dasturlarni sinash amalga oshiriladi",
     },
     {
-      id: 94,
-      correct_answer:
-        "A. algoritmning qadamlar ketma-ketligi qayta-qayta bajarilishi",
-      quiz: "Sikllik algoritm nima?",
+      quiz: "Dasturning hayot davrining yakunlovchi (oxirgi) bosqichida qanday amallar bajariladi?",
+      correct_answer: "tizimni rivojlantirish",
     },
     {
-      id: 95,
+      quiz: "Model deganda...",
       correct_answer:
-        "A. bunda shartga koʻra u yoki boshqa harakatlar ketma-ketligi bajariladi",
-      quiz: "Tarmoqlanuvchi algoritm nima?",
+        "dastur hayot davri kechishi mobaynidagi jarayonlarning ?�zaro bog�liqligi va bojarilish ketma-ketligini belgilaydi",
     },
     {
-      id: 96,
+      quiz: "Dasturlash tizimlari hayot davri standartlari sinfi �",
       correct_answer:
-        "A. uning harakatlari boshidan oxirigacha ketma-ket bajariladi",
-      quiz: "Chiziqli algoritm nima?",
-    },
-    {
-      id: 97,
-      correct_answer: "A. 7",
-      quiz: "Aloqadorlikning nechta turi mavjud?",
+        "tizimni qanday yaratish kerakligini, amalda yaratish, amaliyotda q?�llash va faoliyatini yakunlash tartiblarini belgilab beradi",
     },
     {
-      id: 98,
+      quiz: "Dasturlash tizimlari funsional standartlari sinfi �",
       correct_answer:
-        "A. kirishlar toʻplamini hisobga olgan holda chiqishlar toʻplami qanday hisoblanishini tavsiflovchi model",
-      quiz: "Hisoblash modeli nima?",
+        "tiziga q?�yilgan talablarni bajarilishini ta�minlash maqsadida, uning faoliyati tartibini belgilaydi",
     },
     {
-      id: 99,
-      correct_answer: "A. ketma-ket, funksional va parallel",
-      quiz: "Hisoblash modellari qanday toifalarga bo'linadi?",
+      quiz: "Dasturlar uchun yaratilgan standartlar qanday siniflarga ajratilgan?",
+      correct_answer: "funsional va hayot davri standartlar",
     },
     {
-      id: 100,
+      quiz: "Funsional standartlar bu �",
       correct_answer:
-        "A. Cheklangan avtomatlar, chiqarish avtomatlari, Tyuring mashinasi",
-      quiz: "Ketma-ket modellarga nimalar kiradi:",
+        "tizimga q?�yilgan talablarni bajarilishini ta�minlash maqsadida, uning faoliyati tartibini belgilaydi",
     },
     {
-      id: 101,
+      quiz: "Dasturlar hayot davri standartlari �",
       correct_answer:
-        "A. Lambda hisobi, rekursiv funksiyalar, kombinator mantiq",
-      quiz: "Funktsional modellarga nimalar kiradi?",
+        "tizimni qanday yaratish kerakligini, amalda yaratish, amaliyotda q?�llash va faoliyatini yakunlash tartiblarini belgilab beradi",
     },
     {
-      id: 102,
+      quiz: "Pog�onali (sharshar usulining mohiyati �",
       correct_answer:
-        "A. Texnologik Kan tarmoqlari, Petri tarmoqlari, Sinxron ma’lumotlar oqimi",
-      quiz: "Parallel modellarga nimalar kiradi?",
+        "loyihani bosqichlarga b?�lib, bir bosqichdan keyingi bosqichga ?�tish sharti avvalgi bosqichdagi barcha ishlarning  nihoyasiga yetganligi deb belgilanadi",
     },
     {
-      id: 103,
-      correct_answer: "A. algoritm",
-      quiz: "Oldindan belgilangan aniq va ravshan ko'rsatma ijrochining cheklangan miqdordagi bosqichlarda muammoning echimini olish uchun ma'lum bir ketma-ketlikni bajarishi qanday nomlanadi?",
-    },
-    {
-      id: 104,
-      correct_answer:
-        "A. muayyan harakatlar ketma-ketligini bajarish uchun ijrochiga aniq va ravshan ko'rsatmasi",
-      quiz: "Algoritm nima?",
+      quiz: "Spiral modelining asosiy muammosi �",
+      correct_answer: "keyingi bosqichga ?�tish paytini aniqlashdan iborat",
     },
     {
-      id: 105,
+      quiz: "Pog�onali (sharshar modelining ijobiy tomoni ...",
       correct_answer:
-        "A. muayyan harakatlar majmuasini bajarishga qodir boʻlgan shaxs yoki kompyuter",
-      quiz: "Algoritm ijrochisi nima?",
+        "ishni bajarilish muddatlarini va ishni bajarishga sarflanadigan xarajatlarni rejalashtirish imkoniyatining mavjudligi hisoblanadi",
     },
     {
-      id: 106,
-      correct_answer: "A. dastur",
-      quiz: "“Tushunarli” kompyuter dasturlash tilida yozilgan algoritm nima deb ataladi?",
-    },
-    {
-      id: 107,
+      quiz: "Pog�onali (sharshar modelining kamchiligi �",
       correct_answer:
-        "A. algoritmni geometrik shakllar yordamida ifodalash usuli",
-      quiz: "Algoritmning grafik ta'rifi (blok-sxemalar) nima?",
+        "avval qabul kilingan qarorlarni aniqlash va qayta k?�rib chiqish maqsadda oldingi pog�onalarga qaytish zarurati doimiy ravishda  paydo b?�ladi",
     },
     {
-      id: 108,
+      quiz: "Spiral model �",
       correct_answer:
-        "A. algoritm o'xshash masalalarni yechish uchun uni qo'llash imkoniyatini ta'minlashi kerak",
-      quiz: "Algoritmning “ommaviylik” xossasi nimani anglatadi?",
+        "yaratilayotgan axborot tizimiga, uni yaratilish jarayonida, bevosita va doimiy ravishda ?�zgarishlar va yangiliklarni tadbiq qilishga y?�naltirilgan",
     },
     {
-      id: 109,
+      quiz: "Dasturning hayot davri deganda �",
       correct_answer:
-        "A.  muhandislik inshootini yoki texnologik jarayonni modellashtirish jarayoni boʻlib, uning muhandislik modeliga maʼlum texnik gʻoyani amalga oshirish imkonini beradi.",
-      quiz: "Loyihalashtirish nima?",
+        "uni yaratish zarurligi t?�g�risida qarar qabul qilingan vaqtdan boshlab, tizim faoliyatining yakunigacha b?�lgan uzluksiz jarayon tushuniladi",
     },
     {
-      id: 110,
-      correct_answer: "A. loyiha",
-      quiz: "Loyihalash jarayonining natijasi qanday?",
-    },
-    {
-      id: 111,
+      quiz: "Spiral modelning maqsadi �",
       correct_answer:
-        "A. loyihani amalga oshirish uchun zarur bo'lgan buyruqlar to'plami",
-      quiz: "Loyihalash algoritmi nima?",
+        "imkon qadar tezroq foydalanuvchilarga tayyor mahsulotni taqdim etish",
     },
     {
-      id: 112,
+      quiz: "Sharshara modelining mohiyati ....",
       correct_answer:
-        "A. loyihaning keyingi yo‘nalishini yoki yakunini ko‘rib chiqish va aniqlash uchun zarur va yetarli bo‘lgan loyiha ob’ektining oraliq yoki yakuniy tavsifi.",
-      quiz: "Loyiha yechimi nima?",
-    },
-    {
-      id: 113,
-      correct_answer: "A. loyihalash shablonlari",
-      quiz: "Dasturiy ta'minot arxitekturasini loyihalashda muayyan muammoning umumiy yechimi?",
-    },
-    {
-      id: 114,
-      correct_answer: "A. idiomalar",
-      quiz: "Eng quyi darajadagi va eng oddiy shablonlar nima deb ataladi?",
-    },
-    {
-      id: 115,
-      correct_answer: "A. yaratilgan shablonlar",
-      quiz: "Qanday shablonlar dasturga keraksiz bog'liqliklarni kiritmasdan ob'ektlarni moslashuvchan yaratish haqida tashvishlanadi?",
-    },
-    {
-      id: 116,
-      correct_answer: "A. tuzilmaviy shablonlar",
-      quiz: "Qaysi shablonlar ob'ektlar o'rtasidagi munosabatlarni o'rnatishning turli usullarini ko'rsatadi?",
-    },
-    {
-      id: 117,
-      correct_answer: "A. xulq-atvor shablonlari",
-      quiz: "Ob'ektlar o'rtasidagi samarali aloqa uchun qanday shablonlar g'amxo'rlik qiladi?",
-    },
-    {
-      id: 118,
-      correct_answer: "A. arxitekturaviy shablonlar",
-      quiz: "Berilgan kontekstda dastur arxitekturasining ko’p uchraydigan muammosining umumiy va takrorlanuvchi yechimi ...",
+        "loyihani t?�lig�ichi bosqichlarga b?�lib, bir bosqichdan keyingi bosqichga ?�tish sharti avvalgi bosqichdagi barcha ishlarning nihoyasiga yetganligi deb belgilagadi.",
     },
     {
-      id: 119,
-      correct_answer: "A. ko’pbosqichli",
-      quiz: "Abstraktsiyaning ma'lum darajalarida joylashgan ba'zi bir kichik vazifalar guruhlariga ajraladigan dasturlarni tuzish uchun qanday arxitekturaviy shablon ishlatiladi?",
-    },
-    {
-      id: 120,
+      quiz: "Dasturiy ta�minot - bu",
       correct_answer:
-        "A. Onlayn ilovalar (elektron pochta, hujjat almashish, bank xizmatlari)",
-      quiz: "Mijoz-server shabloni qayerda ishlatiladi?",
-    },
-    {
-      id: 121,
-      correct_answer: "A. Kompyuter shinasiga ulangan periferik qurilmalar",
-      quiz: "Etakchi-izdosh shabloni qayerda ishlatiladi?",
+        "tizimning apparat qismiga kerakli harakatlarni bajarishga, kompyuterni �jonlantirishga� imkon beradigan dasturlar t?�plamidan tashkil topadi",
     },
     {
-      id: 122,
-      correct_answer: "A. kanallar va filtrlar",
-      quiz: "Ma'lumotlar oqimini ishlab chiqaruvchi va qayta ishlaydigan tizimlar uchun qaysi shablon mos keladi?",
+      quiz: "Zamonaviy kompyuterlarning dasturiy ta�minoti qanday guruhga b?�linadi?",
+      correct_answer: "tizim dasturlar va amaliy dasturlar",
     },
     {
-      id: 123,
+      quiz: "Kompilyator bu....",
       correct_answer:
-        "A. uzilgan komponentlar bilan taqsimlangan tizimlarni strukturalash uchun",
-      quiz: "Vositachi shabloni nima uchun foydalaniladi?",
-    },
-    {
-      id: 124,
-      correct_answer: "A. vositachi shabloni",
-      quiz: "Ajratilgan komponentlar bilan taqsimlangan tizimlarni tuzish uchun qanday shablon ishlatiladi?",
+        "dastur tuzish uchun, kodlarning qonun qoida b?�yicha terilganligini nazorat qiluvchi va dasturning natijasini chiqaruvchi amaliy dasturdir",
     },
     {
-      id: 125,
-      correct_answer: "A. fayl almashish tarmoqlari",
-      quiz: "“Foydalanuvchilararo shablon” i qayerda qo'llaniladi?",
+      quiz: "Funksiyaga k?�rsatkichning yozilish sintaksisi quyidagicha:",
+      correct_answer: "<tur> (* <nom>) (<parametrlar ro�yxati>);",
     },
     {
-      id: 126,
-      correct_answer:
-        "A. hodisa manbai, voqea tinglovchisi, kanal, voqea asosi",
-      quiz: "Voqealarga asoslangan shablonining tarkibiy qismlari qanday?",
-    },
-    {
-      id: 127,
-      correct_answer: "A. doska shabloni",
-      quiz: "Aniq deterministik echimlar mavjud bo'lmagan muammolar uchun qanday shablon mos keladi?",
+      quiz: "Konstruktor parametri sifatida ?�z sinfining nomini ishlatish mumkinmi?",
+      correct_answer: "Y?�q",
     },
     {
-      id: 128,
-      correct_answer: "A. o'z taqdimotiga ega ixtisoslashtirilgan modullar",
-      quiz: "Doska shablonidagi bilim manbai komponenti nima?",
+      quiz: "Konstruktorni oddiy komponenta funksiya sifatida chaqirib b?�ladimi?",
+      correct_answer: "Y?�q",
     },
     {
-      id: 129,
-      correct_answer:
-        "A. Ba'zi hollarda, ba'zi bosqichlarni o'tkazib yuborish mumkin",
-      quiz: "Ko’pbosqichli shablonning kamchiliklari?",
+      quiz: "Agar sinfda oshkor destruktor mavjud b?�lmasa, ...",
+      correct_answer: "k?�zda tutilgan destruktor chaqiriladi",
     },
     {
-      id: 130,
+      quiz: "Dastur hali obyektni yaratganicha y?�q, ammo u elementdan foydalanishi kerak. Bunday holda nima qilish kerak?",
       correct_answer:
-        "A. Resurs va hisoblash quvvati jihatidan yuqori mashtablilik",
-      quiz: "“Foydalanuvchilararo shablon” shablonining afzalliklari?",
-    },
-    {
-      id: 131,
-      correct_answer: "A. yaratuvchi shablonlar",
-      quiz: "Qaysi shablonlar tizimni ob'ektlarni yaratish, kompozitsiyalash va taqdim etish usullaridan mustaqil qilish imkonini beradi?",
+        "elementdan foydalanish uchun dastur uni public va static sifatida e�lon qilishi kerak",
     },
     {
-      id: 132,
-      correct_answer: "A. fabrika",
-      quiz: "Quyidagi shablonlardan qaysi biri yaratuvchi hisoblanadi?",
+      quiz: "Qaysi funskiyalar sinfdan tashqarida mavjud b?�ladi va ushbu funksiya sinfning barcha sohalariga murojaat qila olishi mumkin.",
+      correct_answer: "Friend funksiyalari",
     },
     {
-      id: 133,
-      correct_answer: "A. fabrika",
-      quiz: "Hech qanday mantiqni ko'rsatmasdan mijoz uchun namuna yaratadigan asosiy shablon nima?",
+      quiz: "Static metodlar ________ murojat qiladi. (Jumlani t?�ldiring)",
+      correct_answer: "static a�zolarga",
     },
     {
-      id: 134,
-      correct_answer: "A. fabrika usuli",
-      quiz: "Subklasslar sinfni yaratish uchun interfeys bilan ta'minlaydigan loyihalashning yaratuvchi shabloni qaysi biri?",
+      quiz: "Bir nechta konstruktor e�lon qilinganda, asosan nimaga ahamiyat berish kerak?",
+      correct_answer: "parametrlar soni har xil b?�lishiga",
     },
     {
-      id: 135,
+      quiz: "Biror sinfga d?�st(friend) b?�ladigan sinf _____________.",
       correct_answer:
-        "A. O'ziga xos loyihalash shabloni, o'zaro bog'liq yoki o'zaro bog'liq bo'lgan ob'ektlar oilalarini ularning maxsus sinflarini ko'rsatmasdan yaratish uchun interfeysni ta'minlaydi.",
-      quiz: "Abstrakt fabrika shabloni nima?",
-    },
-    {
-      id: 136,
-      correct_answer: "A. quruvchi",
-      quiz: "Kompozit ob'ektni yaratish usulini ta'minlovchi loyihalashning yaratuvchi shabloni qaysi biri?",
-    },
-    {
-      id: 137,
-      correct_answer: "A. yagona ",
-      quiz: "Yagona jarayonli ilovada sinfning yagona nusxasi mavjudligini ta'minlaydigan va ushbu namunaga global kirish nuqtasini ta'minlaydigan loyihalashning yaratuvchi shabloni qaysi biri?",
-    },
-    {
-      id: 138,
-      correct_answer: "A. tuzilmaviy naqshlar",
-      quiz: "Sinflar va ob'ektlardan qanday qilib kattaroq tuzilmalar hosil bo'lishi haqidagi savolga javob beradigan loyihalash shabloni?",
-    },
-    {
-      id: 139,
-      correct_answer: "A. bog‘lovchi komponovshik",
-      quiz: "Quyidagi shablonlardan qaysi biri tuzilmaviy hisoblanadi?",
+        "mazkur sinfning a�zolaridan foydalanish imkoniyatini yaratadi",
     },
     {
-      id: 140,
-      correct_answer:
-        "A. maxsus yaratilgan interfeys orqali oʻzgartirish uchun mavjud boʻlmagan obyekt funksiyalaridan foydalanishni tashkil etish",
-      quiz: "Adapter tuzilmaviy shabloni nima uchun mo'ljallangan?",
+      quiz: "this k?�rsatkichidan foydalanishga misollar qaysi qatorda berilgan?",
+      correct_answer: "cout<<this->n; cout<<(*this).n;",
     },
     {
-      id: 141,
-      correct_answer: "A. ko'prik",
-      quiz: "Abstraktsiya va amalga oshirishni mustaqil ravishda o'zgartirishi uchun dasturiy ta'minotni loyihalashda foydalaniladigan strukturaviy dizayn namunasi?",
+      quiz: "Class nomi bilan bir xil e�lon qilinadigan funksiya nima deyiladi?",
+      correct_answer: "Konstruktor",
     },
     {
-      id: 142,
+      quiz: "Destructor nima?",
       correct_answer:
-        "A. bir vaqtning oʻzida oddiy va murakkab obʼyektlardan iborat boʻlishi mumkin boʻlgan sinflar ierarxiyasi",
-      quiz: "Loyihalashning tuzilmaviy shablonlaridan komponovshik nimani belgilaydi?",
-    },
-    {
-      id: 143,
-      correct_answer: "A. o’rinbosar",
-      quiz: "Barcha chaqiruvlarni ushlab turish orqali boshqa ob'ektga kirishni boshqaradigan ob'ektni ta'minlovchi tuzilmaviy shablon (konteyner vazifasini bajaradi)?",
-    },
-    {
-      id: 144,
-      correct_answer: "A. xulq-atvorli shablonlari",
-      quiz: "Turli ob'ektlar va sinflarning o'zaro ta'sirini amalga oshirish algoritmlari va usullarini belgilaydigan loyihalash shablonining nomi qanday?",
-    },
-    {
-      id: 145,
-      correct_answer: "A. ma’suliyatlar zanjiri",
-      quiz: "Quyidagi modellardan qaysi biri xulq-atvor shablonidir?",
-    },
-    {
-      id: 146,
-      correct_answer: "A. ma’suliyatlar zanjiri",
-      quiz: "Mas'uliyat darajasida tizimni tashkil qilish uchun xulq-atvor shabloni qaysi?",
+        "Destructor - bu obyektni y?�q qiladigan yoki ?�chiradigan a�zo funksiyasi",
     },
     {
-      id: 147,
-      correct_answer: "A. vositachi",
-      quiz: "Ko'pgina ob'ektlarning o'zaro ta'sirida zaif bog'lanishni yaratish va ob'ektlarning bir-biriga aniq havola qilish zaruratini yo'q qilishga imkon beruvchi xulq-atvorli shablon?",
+      quiz: "Constructorning vazifasi nima?",
+      correct_answer: "Classning maydonlariga boshlang�ich qiymat beradi",
     },
     {
-      id: 148,
-      correct_answer:
-        "A. algoritmlar oilasini aniqlash, ularning har birini qamrab olish va ularning oʻzaro almashinishini taʼminlash.",
-      quiz: "“Strategiya” xulq-atvor loyihalash shabloni nima uchun?",
+      quiz: "Bir sinfda nechtagacha konstruktor e�lon qilish mumkin?",
+      correct_answer: "Ixtiyoriy",
     },
     {
-      id: 149,
-      correct_answer: "A. xotira",
-      quiz: "Inkapsulatsiyani buzmasdan, ob'ektning ichki holatini keyinchalik o'sha holatga qaytarish uchun tuzatish va saqlash imkonini beruvchi xulq-atvorli loyihalash shabloni?",
+      quiz: "Konstruktorlar va destruktorlar sinfning qaysi b?�limida e�lon qilinadi?",
+      correct_answer: "Public",
     },
     {
-      id: 150,
+      quiz: "Do�stona funksiya nima?",
       correct_answer:
-        "A. dasturni bajarish jarayonida obʼyekt oʻz holatiga qarab oʻz harakatini oʻzgartirishi kerak boʻlgan hollarda qoʻllaniladi",
-      quiz: "Xolat xulq-atvori loyihalash shabloni qachon qo'llaniladi?V. algoritmlar turkumini aniqlash, ularning har birini qamrab olish va oʻzaro almashinishini taʼminlash uchun ishlatiladi.",
+        "friend sinf atributi bilan e�lon qilingan, ammo sinf a�zosi b?�lmagan funksiya",
     },
     {
-      id: 151,
-      correct_answer: "A. modul",
-      quiz: "Muayyan nuqtai nazardan ko'rib chiqiladigan ixtiyoriy tizim, ob'ekt yoki jarayonning ma'lum tilda yoki grafik shaklda tasvirlanishi nima?",
+      quiz: "Dectructor e�loni qanday b?�ladi?",
+      correct_answer: "Descturtor()",
     },
     {
-      id: 152,
-      correct_answer:
-        "A. Dasturiy ta'minot kontseptsiyasi ishlab chiqilgan paytdan boshlab va undan keyingi dasturiy ta'minotdan foydalanish mumkin bo'lmagan vaqtgacha tugaydigan vaqt davri",
-      quiz: "Dasturning hayot sikli nima?",
+      quiz: "Obyekt a�zolariga k?�rsatkich orqali murojat qilish uchun qaysi operator ishlatilinadi?",
+      correct_answer: '"- >"',
     },
     {
-      id: 153,
+      quiz: "Constructor e�loni qanday?",
       correct_answer:
-        "A. bu tizim xatti-harakatining xarakterli xususiyatlarini ishlab chiquvchining til tavsifi.",
-      quiz: "Spetsifikatsiya nima?",
+        " Class Shakl{ int a; int b;  Shakl(int a, int b){ this.a=a; this.b =b;}};",
     },
     {
-      id: 154,
-      correct_answer: "A. dasturiy ta'minotning hayot sikli",
-      quiz: "Dasturiy ta'minot tushunchasi paydo bo'lgan paytdan boshlab va undan keyingi dasturiy ta'minotdan foydalanish mumkin bo'lmagan vaqtgacha bo'lgan vaqt davri qanday nomlanadi:",
+      quiz: "this kalit s?�zi nimani anglatadi?",
+      correct_answer: "joriy obyektga k?�rsatkich",
     },
     {
-      id: 155,
-      correct_answer: "A. kaskadliA. metodologiya",
-      quiz: "Qaysi model loyiha davomida doimiy bo'lib qoladigan aniq belgilangan talablarni talab qiladi?D.V modeliTegishli loyihalarni amalga oshirishda modellarni qurish jarayonini belgilovchi dasturiy tizimlar va ilovalarni ishlab chiqish tamoyillari va usullari majmui qanday nomlanadi?",
+      quiz: "Biror sinfga do�stona b?�ladigan sinf qanday imkoniyat yaratadi?",
+      correct_answer: "mazkur sinfning a�zolaridan foydalanish",
     },
     {
-      id: 156,
-      correct_answer: "A. ma'lumotlarni qayta ishlash algoritmi",
-      quiz: "Kelajakda tanlangan dasturlash muhitida amalga oshirilishi mumkin bo'lgan informatika muammosini hal qilish usulining tavsifi",
+      quiz: "Destruktor parametri yoki qaytariluvchi qiymatga egami?",
+      correct_answer: "Y?�q",
     },
     {
-      id: 157,
-      correct_answer:
-        "A. algoritmni tahlil qilishda hisobga olinadigan elementar amallar soni",
-      quiz: "Algoritmning murakkabligi nimada?",
+      quiz: "Konstruktor qanday tip qaytaradi?",
+      correct_answer: "hech qanday",
     },
     {
-      id: 158,
-      correct_answer:
-        "A. Bular ma’lumotlarni qayta ishlash texnikasi haqida tushunchaga ega bo‘lish uchun foydalaniladigan asosiy tamoyillar va metodologiyani belgilaydigan algoritmlardir.",
-      quiz: "Ma'lumotlar tuzilmalari bilan ishlash algoritmlari qanday?",
+      quiz: "Class ?�zgaruvchisini ________e�lon qilinganda kompilyator uni obyektlar uchun bitta nusxa k?�rinishida yaratadi.",
+      correct_answer: "static",
     },
     {
-      id: 159,
-      correct_answer: "A. massivlar va fayllarni tartiblash algoritmlari",
-      quiz: "Saralash algoritmlari nima?",
+      quiz: "Funksiya obyekt qaytarishi uchun qaytariladigan obyektning toifasi?",
+      correct_answer: "Funksiyaning qaytarish tipiga k?�rsatilishi kerak.",
     },
     {
-      id: 160,
-      correct_answer: "A. satrlarni qayta ishlash algoritmlari",
-      quiz: "Belgilar ketma-ketligini qayta ishlashning bir qancha usullarini o'z ichiga olgan algoritmlar qanday nomlanadi?",
+      quiz: "Agar parametrli konstruktor mavjud b?�lsa obyektlarni inisalizatsiya qilsa b?�ladimi?",
+      correct_answer: "Ha",
     },
     {
-      id: 161,
+      quiz: "Sinfga ta�rif bering?",
       correct_answer:
-        "A. Grafik uchlari to‘plami va qirralar to‘plami (cho‘qqi juftlari orasidagi bog‘lanish) bo‘lgan mavhum matematik obyekt.",
-      quiz: "Grafik nima?",
+        "sinflar - bu hali mavjud b?�lmagan obyektlarning usullarini, xususiyatlarini tavsiflovchi abstraksiY.",
     },
     {
-      id: 162,
-      correct_answer: "A. halqa(petlya)",
-      quiz: "Chiqib ketadigan va bir xil cho'qqiga tushadigan chiziq nima deb ataladi?",
-    },
-    {
-      id: 163,
+      quiz: "Polimorfm sinf -",
       correct_answer:
-        "A. grafning dastlabki berilgan bir choʻqqisidan qolgan barcha choʻqqilarga eng qisqa yoʻllarni topadi",
-      quiz: "Dekstra algoritmi?",
-    },
-    {
-      id: 164,
-      correct_answer: "A. kodni generasiya qilish",
-      quiz: "Kompilyatorning maxsus qismi - kod generatori sintaktik jihatdan to'g'ri dasturni mashinada bajarilishi mumkin bo'lgan buyruqlar ketma-ketligiga aylantirganda kompilyatsiya jarayonining qismi qanday nomlanadi?",
+        "tarkibida hech b?�lmaganda bitta virtual funksiyasi b?�lgan sinfga aytiladi",
     },
     {
-      id: 165,
-      correct_answer: "A. rejalashtirish",
-      quiz: "Konveyerli protsessorlarda dasturni bajarish tezligiga sezilarli ta'sir ko'rsatadigan optimallashtirish nima deyiladi?",
+      quiz: "Abstrakt sinf obyektini yaratish mumkinmi?",
+      correct_answer: "mumkin emas",
     },
     {
-      id: 166,
-      correct_answer: "A. algoritmik modellashtirish",
-      quiz: "Loyihaning murakkabligining dasturiy mahsulotning qandaydir miqdoriy ko‘rsatkichiga bog‘liqligini aniqlashda avval tugallangan loyihalar bo‘yicha statistik ma’lumotlarni tahlil qilishga asoslangan usul qanday nomlanadi?",
+      quiz: "Abstrakt sinfga k?�rsatkich yoki adres olish amalini e�lon qilish mumkinmi?",
+      correct_answer: "mumkin",
     },
     {
-      id: 167,
-      correct_answer: "A. ekspert xulosasi",
-      quiz: "Yaratilgan dasturiy mahsulotni qo'llash sohasini biladigan dasturiy ta'minotni ishlab chiqish texnologiyasi bo'yicha bir necha mutaxassislardan so'rov qanday usulda o'tkaziladi?",
+      quiz: "Obyekt turini oshkor ravishda abstrakt sinf turiga keltirish mumkinmi",
+      correct_answer: "mumkin emas",
     },
     {
-      id: 168,
-      correct_answer: "A. analogiya boʻyicha baholash",
-      quiz: "Rejalashtirilgan loyihani o'xshash xususiyatlarga ega oldingi loyihalar bilan solishtirishga qanday usul deyiladi?",
+      quiz: "Tayanch sinfda ta�riflanmagan virtual funksiya nima deb ataladi?",
+      correct_answer: "pure virtual function deb ataladi",
     },
     {
-      id: 169,
+      quiz: "Polimorfizm bu:",
       correct_answer:
-        "A. Turli ishlab chiqish guruhlarida o'lchamlarni va ishlashni o'lchash usullarini solishtirish qobiliyati",
-      quiz: "O'lchov birligi sifatida LOC (Lines of Code) dan foydalanishning afzalliklari?",
-    },
-    {
-      id: 170,
-      correct_answer: "A. dasturiy ta'minot ko'rsatkichi",
-      quiz: "Dasturiy ta'minotning ma'lum bir xususiyati yoki uning texnik xususiyatlarining raqamli qiymatini olish imkonini beruvchi o'lchov qanday nomlanadi?",
+        "tegishli sinflar uchun xos b?�lgan amallarni k?�rsatish uchun bitta ismdan foydalanishga imkon beradigan vosita",
     },
     {
-      id: 171,
-      correct_answer: "A. nominal shkala",
-      quiz: "Dasturlarni darajalaridan qat'i nazar, ba'zi xususiyatlarning mavjudligi yoki yo'qligiga qarab turlarga ajratadigan ko'rsatkichlar qaysi shkalaga mos keladi?",
-    },
-    {
-      id: 172,
-      correct_answer: "A. tartibli shkala ",
-      quiz: "Ba'zi xususiyatlarni mos yozuvlar qiymatlari bilan taqqoslash orqali tartiblash imkonini beradigan ko'rsatkichlar qaysi shkalaga mos keladi, ya'ni ushbu shkala bo'yicha o'lchov aniq dasturlarning nisbiy o'rnini aniqlaydi?",
-    },
-    {
-      id: 173,
-      correct_answer: "A. intervalli shkala",
-      quiz: "Ular nafaqat dasturlarning nisbiy o'rnini, balki ular qanchalik uzoqda joylashganligini ham ko'rsatadigan ko'rsatkichlar qanday shkalaga mos keladi?",
-    },
-    {
-      id: 174,
-      correct_answer: "A. nisbiy shkala",
-      quiz: "Nafaqat dasturlarni ma'lum bir tarzda tartibga solish va ularning bir-biriga nisbatan o'rnini baholash, balki tavsiflarni o'lchash mumkin bo'lgan chegaradan qanchalik uzoqligini aniqlash imkonini beradigan ko'rsatkichlar qaysi shkalaga mos keladi?",
-    },
-    {
-      id: 175,
+      quiz: "Polimorfizm quyidagi mexanizmlar orqali amalga oshiriladi:",
       correct_answer:
-        "A. hayot siklining bosqichlari uchun ish jadvalini kuzatib borish va haqiqiy va rejalashtirilgan qiymatlarni solishtirish",
-      quiz: "Hayotiy sikl ko'rsatkichi va calendar rejaning asosiy maqsadi nima?",
+        "funksiyalar, virtual funksiyalar, shablonlarning haddan tashqari k?�payishi",
     },
     {
-      id: 176,
-      correct_answer: "A. loyihaning murakkablik omili",
-      quiz: "Loyihaning barcha tashqi artefaktlarining umumiy hajmini har bir tashqi artefakt uchun aniqlangan murakkablik koeffitsientiga ko'paytiruvchi qiymat qanday nomlanadi?",
-    },
-    {
-      id: 177,
+      quiz: "Obyektga y?�naltirilgan dasturlashda polimorfizm amalga oshiriladi:",
       correct_answer:
-        "A. loyihadagi jadvaldagi oʻzgarishlarni ularning yuzaga kelish ehtimolini hisobga olgan holda aks ettiruvchi umumiy qiymat (odam-soatlarda ifodalangan)",
-      quiz: "Jadvalning umumiy xavfi nima?",
-    },
-    {
-      id: 178,
-      correct_answer: "A. loyiha zichligi",
-      quiz: "Jadvaldagi barcha ishlarning ketma-ket bajarilgandagi umumiy davomiyligining uning yig'indisiga va barcha rejalashtirilgan ishlar uchun vaqtning umumiy zaxirasiga nisbati?",
-    },
-    {
-      id: 179,
-      correct_answer: "A. loyihaning mustaqilligi",
-      quiz: "Loyihaning ichki faoliyatiga bog'liqliklar soni bilan bog'liqliklarning umumiy soni, shu jumladan tashqi faoliyat va sotuvchilarga bog'liqliklar o'rtasida qanday bog'liqlik bor?",
-    },
-    {
-      id: 180,
-      correct_answer: "A. Loyiha rejasining murakkabligi",
-      quiz: "Har xil rejalashtirilgan ishlar o'rtasidagi munosabatlar va o'zaro bog'liqliklar soni barcha rejalashtirilgan ishlarning umumiy soniga tegishliligi nima deyiladi?",
+        "qayta yuklash mexanizmlari (funksiyalar va operatsiyalar), virtual funksiyalar va shablonlar orqali",
     },
     {
-      id: 181,
-      correct_answer: "",
-      quiz: "Umumiy byudjet xavfi nima? A. tasodifiy xarajatlar bo‘yicha byudjet rejasi asosida, ularning yuzaga kelish ehtimolini hisobga olgan holda, loyiha bo‘yicha barcha tasodifiy xarajatlar yig‘indisi.",
+      quiz: "OYD qanday xossasi bir xil iyerarxiyaning turli xil obyektlariga huddi birday munosabatda b?�lishga imkon beradi?",
+      correct_answer: "polimorfizm",
     },
+    { quiz: "Qaysi operatorni qayta yuklab b?�lmaydi?", correct_answer: "?:" },
     {
-      id: 182,
-      correct_answer:
-        "A. har xil rejalashtirilgan ishlar o'rtasidagi munosabatlar va o'zaro bog'liqliklar soni, barcha rejalashtirilgan ishlarning umumiy soniga tegishli",
-      quiz: "Loyiha rejasining murakkabligi nimada?",
+      quiz: "127. Qaysi operatorlarni qayta yuklash mumkin?",
+      correct_answer: '"+, -, *, /, %"',
     },
     {
-      id: 183,
+      quiz: "Operator funksiyasi qayerda aniqlangan b?�lishi mumkin?",
       correct_answer:
-        "A. bajarilgan ish uchun haqiqiy bajarilgan ish va rejalashtirilgan ish o'rtasidagi farq",
-      quiz: "Calendar rejadagi farq nima?",
-    },
-    {
-      id: 184,
-      correct_answer: "A. jadvalning bajarilishi",
-      quiz: "Tugallangan ish uchun haqiqiy mehnat xarajatlarining ushbu ishlar uchun rejalashtirilgan mehnat xarajatlariga nisbati (rejalashtirilgan mehnat zichligi)?",
-    },
-    {
-      id: 185,
-      correct_answer: "A. rejadan orqada",
-      quiz: "Rejadan tashqari topshiriqlar uchun kechikish vaqti?",
-    },
-    {
-      id: 186,
-      correct_answer: "A. baholashning ishonchlilik omili",
-      quiz: "Loyiha qiymati mahsulotining uning davomiyligi bo'yicha o'sib borayotgan rejalashtirish xatosining umumiy qiymatiga nisbati?",
-    },
-    {
-      id: 187,
-      correct_answer: "A. statik kod tahlili",
-      quiz: "Dasturlarning dastlabki kodidagi xato va nuqsonlarni aniqlash jarayoni qanday nomlanadi?",
-    },
-    {
-      id: 188,
-      correct_answer: "A. testlash",
-      quiz: "Dasturiy ta'minot mahsuloti va tegishli ish natijalarini rejalashtirish, tayyorlash va baholash bilan bog'liq bo'lgan dinamik va statik hayot siklining barcha jarayonlarini o'z ichiga olgan jarayon, ular tavsiflangan talablarga javob berishini aniqlash, ularning maqsadga erishish uchun mos ekanligini ko'rsatish uchun shuningdek, kamchiliklarni topish uchun belgilangan maqsadlar nima deyiladi?",
-    },
-    {
-      id: 189,
-      correct_answer: "A. statik testlash",
-      quiz: "Dasturiy ta'minot mahsuloti kodini, masalan, ko'rib chiqish yoki statik kod tahlilini bajarmasdan, spetsifikatsiya yoki amalga oshirish darajasida komponent yoki tizimni sinovdan o'tkazish qanday nomlanadi?",
-    },
-    {
-      id: 190,
-      correct_answer: "A. vizual modellashtirish",
-      quiz: "Modellar yordamida real dunyoda g'oyalar va muammolarni ifodalash usuli?",
+        "sinf ta�rifi ichida ham, undan tashqarida ham aniqlanishi mumkin",
     },
     {
-      id: 191,
-      correct_answer: "A. dekompozisiya",
-      quiz: "Muammoning strukturasidan foydalanadigan va bitta katta muammoning yechimini bir-biri bilan bog'liq bo'lsa-da, lekin soddaroq bo'lsa-da, bir qator kichikroq muammolarni hal qilish bilan almashtirishga imkon beradigan ilmiy usul?",
+      quiz: "Operator funksiyalarining ikki turi mavjud. Ular qaysilar?",
+      correct_answer: "oddiy va komponentli",
     },
     {
-      id: 192,
-      correct_answer: "A. model",
-      quiz: "Murakkab muammo yoki tuzilmaning mohiyatini ahamiyatsiz tafsilotlarga qaratmasdan tasvirlaydigan va shu bilan uni yanada tushunarli qiladigan abstraksiya?",
+      quiz: "Funksional operatsiya uch y?�l bilan aniqlanishi mumkin. Ular qaysilar?",
+      correct_answer: "sinf metodi, d?�stona funksiyasi va oddiy funksiya",
     },
     {
-      id: 193,
-      correct_answer: "A. batafsil loyihalash",
-      quiz: "Arxitektura va amalga oshirish mustasno bo’lgan loyihalash ishlarining to'liq hajmi,?",
+      quiz: "Operatorlarni qayta yuklash nimaga kerak?",
+      correct_answer: "obyektlar ustida amallar bajarish uchun.",
     },
     {
-      id: 211,
-      correct_answer:
-        "A. u o’zining boshqaruv oqimiga ega va boshqa obyektlar faoliyatini ham boshqarishi mumkin",
-      quiz: "#1. Faol ob’ektning to’g’ri tarifini tanlang?",
+      quiz: "Operatorlarni qayta yuklash afzalliklari nimada?",
+      correct_answer: "turli xil tipdagi qiymatlar qayta ishlash imkonyati",
     },
     {
-      id: 212,
-      correct_answer:
-        "a.\tbu sinf ichidagi usullarning mavjudligi va bu sinflar masalani echish uchun bir-biri bilan o'zaro aloqadorligidir.",
-      quiz: "#2.Ob’ektga yo’naltirilgan dastur nima?",
+      quiz: "Operatorlarni qayta yuklashda qanday operatordan foydalaniladi?",
+      correct_answer: "operator",
     },
     {
-      id: 213,
-      correct_answer:
-        "a. alohida obʼyektlar oʻrtasidagi umumiylikni solishtirish va bu oʻxshashliklardan foydalangan holda tartibga solish harakati ",
-      quiz: "#3.Abstraksiya nima?",
+      quiz: "Qayta yuklash nima?",
+      correct_answer: "turli xil vazifalarni bajarish uchun dastur kodi",
     },
     {
-      id: 214,
-      correct_answer:
-        "a. bu bir nechta ob'ektlarni daraxt tuzilishida guruhlaydi va keyin u bilan xuddi bitta ob'ekt kabi ishlash imkonini beruvchi tuzilmaviy loyihalashtirish shablonidir",
-      quiz: "#4. Kompozitor –bu ….",
+      quiz: "Operatorlarni qayta yuklash qaysi operatorlar uchun mumkin emas?",
+      correct_answer: "�::� , �.*� , �.� , �?.� ;",
     },
     {
-      id: 215,
+      quiz: "Konstruktorlar bu �",
       correct_answer:
-        "a. bir qatorda saqlanadigan har bir massiv element deb ataladi.",
-      quiz: "#5.Element nima?",
+        "sinf komponenta funksiyalari b?�lib, obyektlarni avtomatik initsializatsiya qilish uchun ishlatiladigan vosita",
     },
     {
-      id: 216,
+      quiz: "Obyekt complex cc shaklida aniqlangan b?�lsa nima b?�ladi?",
       correct_answer:
-        "a. bu biror ob’ektni berilgan talablar asosida yaratish uchun zarur bo’lgan tafsivlarni tashkil qilish jarayoni",
-      quiz: "#6. Loyihalashtirish  nima?",
+        "konstruktor avtomatik chaqirilib, rreal va imag parametrlari avtomatik ravishda 0.0 qiymatlariga ega b?�ladi",
     },
     {
-      id: 217,
+      quiz: "Inkapsulyatsiya � bu",
       correct_answer:
-        "a. bu yaratiladigan ob'ektlarning muayyan sinflariga bog'lanmasdan, tegishli ob'ektlar sinflarini yaratishga imkon beruvchi loyihalashning yaratiladigan shablonidir",
-      quiz: "#7*.Abstrakt fabrika nima?",
+        "ma�lumotlar va ularni qayta ishlovchi kodni birlashtirish mexanizmidir",
     },
     {
-      id: 218,
+      quiz: "Inkapsulyasiya .....",
       correct_answer:
-        "a. dasturlarni gradatsiyalardan qat'i nazar, ma'lum bir xarakteristikaning mavjudligi yoki yo'qligi asosida turlarga ajratadigan ko'rsatkichlarga mos keladi.",
-      quiz: "#8. Amaldagi o'lchovlarning xususiyatlari va xususiyatlariga qarab, ular turli o'lchov shkalalariga bo’linib nominal shkalasi qanday?",
+        "ma�lumotlar va kodni tashqi ta�sirdan saqlash imkonini beradi",
     },
     {
-      id: 219,
+      quiz: "Ma�lumot sinf obyektini yaratish qanday funksiya orqali amalga oshiriladi?",
       correct_answer:
-        "a. bu dasturlarning dastlabki kodidagi xato va kamchiliklarni aniqlash jarayoni ",
-      quiz: "#9. Statik kod tahlili nima?",
-    },
-    {
-      id: 220,
-      correct_answer: "a.\tDasturchi-loyihalovchi ",
-      quiz: "#10. Kim dasturiy ta'minot elementlarini va bu elementlarning bir-biri bilan o’zaro qanday bog'liqligini ko’rsatib beradi?",
+        "konstruktor deb nomlanuvchi maxsus funksiya-a�zo orqali amalga oshiriladi",
     },
     {
-      id: 221,
+      quiz: "Ma�lumot sinf obyektini ?�chirish qanday funksiya orqali amalga oshiriladi?",
       correct_answer:
-        "a.\tdasturiy ta'minot elementlarini va bu elementlarning bir-biri bilan o’zaro qanday bog'liqligi tasvirlaydi",
-      quiz: "#11. Dasturchi-loyihalovchi nima ish qiladi?",
+        "destruktor deb nomlanuvchi maxsus funksiya�a�zo orqali amalga oshiriladi",
     },
     {
-      id: 222,
+      quiz: "Sinf ichki ma�lumotlariga murojaatni cheklab q?�yishi qaday tayinlanadi",
       correct_answer:
-        "a.\tLoyiha qismlari asosiy tarkibiy qismlarni va ularning bir-biri bilan qanday bog'liqligi",
-      quiz: "#12. Yuqori darajadagi loyiha nimalarni tasvirlab beradi?",
-    },
-    {
-      id: 223,
-      correct_answer: "a.\tYuqori darajadagi loyiha",
-      quiz: "#13 Nimada asosiy tarkibiy qismlarni va ularning bir-biri bilan qanday bog'liqligini tasvirlab beradi? ",
+        "cheklov ma�lumotlarni ochiq, yopiq va himoyalangan deb aniqlash bilan tayinlanadi",
     },
     {
-      id: 224,
-      correct_answer: "a.\tPastroq darajadagi loyiha",
-      quiz: "#14 Nimada modullar/sinflar va ularning bir -biri bilan qanday bog'liqligini ko’rsatadi?",
+      quiz: "Yopiq (privatma�lumotlarga yoki kodga murojaat qilish taribi qanday?",
+      correct_answer: "faqat shu obyekt ichida murojaat qilish mumkin",
     },
     {
-      id: 225,
-      correct_answer:
-        "a.\tfunksiyalar modul yaratish uchun birlashtirilgan va muammoni hal qilish uchun ko'plab modullar ",
-      quiz: "#15 Prosedurali dasturlashda nima birlashtiriladi?",
+      quiz: "Ochiq (publima�lumotlarga va kodlarga murojaat qilish taribi qanday?",
+      correct_answer: "dasturning ixtiyoriy joyidan murojaat qilish mumkin",
     },
     {
-      id: 226,
+      quiz: "Vorislik � bu shunday jarayonki, unda",
       correct_answer:
-        "a.\tsinflar yaratish uchun usullar birlashtiriladi va muammoni hal qilish uchun ko'plab sinflar",
-      quiz: "#16 Ob'ektga yo'naltirilgan dasturlashda nima birlashtiriladi?",
-    },
-    {
-      id: 227,
-      correct_answer: "a.\tProsedurali dasturlash",
-      quiz: "#17 Funksiyalar modul yaratish uchun birlashtirilgan va muammoni hal qilish uchun ko'plab modullar birlashtirish qanday dasturlashda foydalaniladi?",
-    },
-    {
-      id: 228,
-      correct_answer: "a.\tOb'ektga yo'naltirilgan dasturlash",
-      quiz: "#18 Sinflar yaratish uchun usullar birlashtiriladi va muammoni hal qilish uchun ko'plab sinflarni birlashtirish qanday dasturlashda foydalaniladi?",
-    },
-    {
-      id: 229,
-      correct_answer: "a.\tfunksiyalar ",
-      quiz: "#19 Prosedurali dasturlashda modul nimaga ega bo’ladi?",
-    },
-    {
-      id: 230,
-      correct_answer: "a.\tsinflar ",
-      quiz: "#20 Ob'ektga yo'naltirilgan dasturlashda modul nimaga ega bo’ladi?",
-    },
-    {
-      id: 231,
-      correct_answer: "A.\tketma-ketlik, tanlash va takrorlash",
-      quiz: "#21 Dastur kodining xatti-harakatni ifodalash uchun qanday til tuzilmalaridan foydalanadi?",
-    },
-    {
-      id: 232,
-      correct_answer: "a.\tDasturiy ta’minot loyihasi ",
-      quiz: "#22 Dasturiy ta’minot arxitekturasi, ma’lumotlari, interfeysi va komponentalarini tafsivlovchi qismlar nimani ifodalaydi?",
-    },
-    {
-      id: 233,
-      correct_answer: "a.\tArxitektura",
-      quiz: "#23 Tizimda aniqlangan loyiha elementlarining yuqori darajadagi tavsifi nima deyiladi?",
-    },
-    {
-      id: 234,
-      correct_answer: "a.\tMa'lumotlar",
-      quiz: "#24Tizim foydalanadigan ma'lumotlar tuzilmalarining mantiqiy va jismoniy qismlarining tavsifi nima deyiladi?",
+        "bir obyekt boshqasining xossalarini ?�zlashtirishi mumkin b?�ladi",
     },
     {
-      id: 235,
-      correct_answer: "a.\tKompotentlar",
-      quiz: "#25 Yuqori darajadagi loyiha elementida mavjud bo'lgan muhim yoki noyob ishlov berish bosqichlarining tavsifi nima deyiladi?",
-    },
-    {
-      id: 236,
+      quiz: "Polimorfizm � bu",
       correct_answer:
-        "a.\tYuqori darajadagi loyiha elementida mavjud bo'lgan muhim yoki noyob ishlov berish bosqichlarining tavsifi ",
-      quiz: "#26. Loyihalashda Ma'lumotlar deb nimaga aytiladi?",
-    },
-    {
-      id: 237,
-      correct_answer: "a.\tbu dasturiy ta'minotni tahlil qilish emas",
-      quiz: "#27. Dasturiy ta’minot loyihasiga nima kirmaydi?",
-    },
-    {
-      id: 238,
-      correct_answer: "A.\tAbstraksiya",
-      quiz: "#28 Alohida obʼyektlar oʻrtasidagi umumiylikni solishtirish va bu oʻxshashliklardan foydalangan holda tartibga solish harakati nima deyiladi?",
+        "kodning bajarilish paytidan yuzaga keladigan holatga bog�liq ravishda ?�zini turlicha amal qilish xususiyatidir",
     },
     {
-      id: 239,
+      quiz: "Hosilaviy ma�lumotlar va funksiyalarni qayerdan oladi?",
       correct_answer:
-        "a.\tAlohida obʼyektlar oʻrtasidagi umumiylikni solishtirish va bu oʻxshashliklardan foydalangan holda tartibga solish harakati",
-      quiz: "#29  Abstraksiya nimaga aytiladi?",
-    },
-    {
-      id: 240,
-      correct_answer: "a.\tPython",
-      quiz: "#30  qaysi dasturlash tili abstraksiyaning yuqori darajasida turadi?",
-    },
-    {
-      id: 241,
-      correct_answer: "A.\tModul yoki sinflarga ajratish",
-      quiz: "#31  Dasturiy ta’minot loyihasini baholash mezonlariga nimalar kiradi?",
-    },
-    {
-      id: 242,
-      correct_answer: "a.\tDasturiy ta’minot loyihasini baholash mezoni",
-      quiz: "#32 Faqat kerakli narsalarni loyihalash bu nima hisoblanadi?",
+        "?�zining ona sinfidan ma�lumotlar va funksiyalarni vorislik b?�yicha oladi",
     },
     {
-      id: 243,
-      correct_answer: "a.\tDastur classlari",
-      quiz: "#33  Sinf diagrammasida nimalar tasvirlanadi?",
+      quiz: "Agar obyekt ?�z atributlarini faqat bitta ona sinfdan vorislik bilan olsa ...",
+      correct_answer: "yakka vorislik deyiladi",
     },
     {
-      id: 244,
-      correct_answer: "A.\tArxitektura yomonligini",
-      quiz: "#*34 Arxitekturada o’zgartirish kiritish qiyinligi, masalan, ixtiyoriy o’zgarish tizimning ko’p boshqa qismlariga ta’sir ko’rsatishi nimani anglatadi?",
+      quiz: "Agar obyekt ?�z atributlarini bir nechta ona sinflardan olsa",
+      correct_answer: "t?�plamli vorislik deyiladi",
     },
     {
-      id: 245,
-      correct_answer: "A.\titerativ ",
-      quiz: "#35 Arxitekturani bosqichma-bosqich ishlab chiqishning umumiy texnikasini qanday metodika deyiladi?",
+      quiz: "Yaratilgan obyektlarni, ularni funksiya�a�zolariga oddiygina murojaat orqali amalga oshiriluvchi ...",
+      correct_answer: "xabarlar (yoki s?�rovlar) yordamida boshqarish mumkin",
     },
     {
-      id: 246,
-      correct_answer: "A.\tJarayonning dinamik modellari",
-      quiz: "#36. Qanday model tizimni ishlash vaqtida jarayonlarni tashkil qilishni aks ettiradi?",
+      quiz: "Kechiktirilgan bog�lanishda chaqiriladigan funksiya-a�zolar adreslari dastur bajarilishi jarayonida qanday aniqlanadi?",
+      correct_answer: "dinamik ravishda aniqlanadi",
     },
     {
-      id: 247,
-      correct_answer: "A.\tMunosabat modellari",
-      quiz: "#37. Qanday modellar tizimni qismlari orasidagi munosabatlarni koʼrsatib beradi, masalan, qismtizimlar orasidagi maʼlumotlar oqimi hisoblanadi? ",
+      quiz: "An�anaviy dasturlash tillarida adreslar qanday aniqlanadi?",
+      correct_answer: "ular statik b?�lib, kompilyatsiya paytida aniqlanadi",
     },
     {
-      id: 248,
-      correct_answer: "A.\tInformation architecture",
-      quiz: "#38  Nima mantiqiy va fizik maʼlumotlar aktivlarini boshqarish manbalarini belgilaydi?",
+      quiz: "Dasturlash paradigmasi nima?",
+      correct_answer: "kod yaratish prinsiplari va texnikasi t?�plami",
     },
     {
-      id: 249,
-      correct_answer: "A.\tАrxitektura namunalari",
-      quiz: "#39 Turli xil muhitlarda sinab koʼrilgan yaxshi loyihalash amaliyotining stilini tasniflash nima deyiladi?",
+      quiz: "Dasturlashning asosiy modellarini k?�rsating",
+      correct_answer: "Imperativ, deklarativ, funksional, mantiqiy, OYD",
     },
     {
-      id: 250,
-      correct_answer: "A. 2ta yo’l bilan; ",
-      quiz: "#40  Tizim tuzilmasini qanday amalga oshirish mumkin?",
+      quiz: "Deklorativ dasturlashga t?�g�ri keladigan qatorni aniqlang",
+      correct_answer: "Funksional va mantiqiy dasturlash",
     },
     {
-      id: 251,
+      quiz: "Algoritmning xossalarini toping",
       correct_answer:
-        "A. Tegishli funksiyalari bilan qatlamlari ichida tizimini tashkil etadi. Har bir qatlam bu yuqoridagi qatlam uchun xizmat ko'rsatadi. Xizmatlar eng kam darajasi tomonidan ko'rsatiladigan xizmatlar hisobalanadi",
-      quiz: "#41 Qatlamli arxitektura bu…",
+        "cheklilik, aniqlilik, tushinarlilik, natijaviylik, ommaviylik, samaradorlik",
     },
     {
-      id: 252,
+      quiz: "Protsedurali dasturlash paradigmasi",
       correct_answer:
-        "A. Dasturlarning to`g`ri ishlashi uchun zarur bo'lgan dasturlash kompleksi",
-      quiz: "#Dasturiy ta'minot nima?",
+        "Ananaviy Fon Neymar arxitekturasini aks ettiruvchi dasturlash paradigmasi",
     },
     {
-      id: 253,
-      correct_answer:
-        "A. har qanday tabiat ob'ektini tizim sifatida o'rganish metodikasi",
-      quiz: "#Tizimli yondashuv nima?",
+      quiz: "�goto� ?�tish operatori:",
+      correct_answer: "Protsedurali dasturlashda foydalaniladi",
     },
     {
-      id: 254,
+      quiz: "Boyom-Jokopina teoremasi:",
       correct_answer:
-        "A. ishlab chiqiladigan dasturiy ta'minot harakatining to'liq tavsifi",
-      quiz: "#Dasturiy ta’minot spetsifikatsiyasi nima?",
-    },
-    {
-      id: 255,
-      correct_answer: "A. barcha javoblar toʻgʻri",
-      quiz: '#"Kichik" dasturiy ta\'minotning xususiyatlari qanday?',
-    },
-    {
-      id: 256,
-      correct_answer: "A. barcha javoblar toʻgʻri",
-      quiz: '#"Katta" dasturiy ta\'minot qanday xususiyatlarga ega?',
+        "Har qanday algoritmni strukturali k?�rinishda ifodalash mumkin va uning bajarilish jarayoni uchta boshqaruv tuzilmasi yordamida aniqlanadi",
     },
     {
-      id: 257,
-      correct_answer: "A. 10 kishi",
-      quiz: "#Kichik loyihada qancha odam ishtirok etishi kerak?",
+      quiz: "Strukturali dasturlash operatorlari",
+      correct_answer: " If,else, then, for, while, swich, break, continue",
     },
     {
-      id: 258,
-      correct_answer: "A. 20 dan 30 kishigacha",
-      quiz: "#O'rtacha loyihada qancha odam ishtirok etishi kerak?",
+      quiz: "Barcha obyektlar uchun mavjud b?�lgan sinf a�zolari quyidagi s?�z yordamida e�lon qilinadi:",
+      correct_answer: "static",
     },
     {
-      id: 259,
-      correct_answer: "A. 100 dan 300 kishigacha",
-      quiz: "#Katta hajmdagi loyihaga qancha odam jalb qilinishi kerak?",
+      quiz: "Sinf a�zolariga faqat sinf ichidagi yoki uning avlodlari ichidagi kodlar orqali kirish imkoniyati quyidagi s?�z yordamida e�lon qilinadi:",
+      correct_answer: "private",
     },
     {
-      id: 260,
-      correct_answer: "A. 1000 dan 3000 kishigacha",
-      quiz: "#Gigant loyihada qancha odam ishtirok etishi kerak?",
+      quiz: "Sturkturali dasturlashda qaysi operatordan foydalanmaymiz",
+      correct_answer: "Goto",
     },
     {
-      id: 261,
-      correct_answer: "A. 3 oydan 6 oygacha",
-      quiz: "#Kichik loyihani amalga oshirish muddati qancha?",
+      quiz: 'Dastur bajarilishi natijasida nimalar bosiladi? #include <stdio.h> void main(){ int a = 5 � 3; float b = 1.5f; b -= a/2; printf("%.2f", b);}',
+      correct_answer: "-1.50",
     },
     {
-      id: 262,
-      correct_answer: "A. 1-2 yil",
-      quiz: "#O'rtacha loyihaning muddati qancha?",
+      quiz: "Sikl necha marta bajariladi?: for(int i=0; i<=5; i+=3)",
+      correct_answer: "2 marta",
     },
     {
-      id: 263,
-      correct_answer: "A. 3-5 yil",
-      quiz: "#Keng miqyosli loyihani amalga oshirish muddati qancha?",
+      quiz: 'Qaysi biri quyidagi kodni chiqaradi?: (#include�<?ostream.h> slass A{ private: A(){sout<<"A";}}; int main(){ A a,b; return 0;}',
+      correct_answer: "tuzishda xatolik yuz beradi",
     },
     {
-      id: 264,
-      correct_answer: "A. 10 yilgacha",
-      quiz: "#Gigant loyihani amalga oshirish muddati qancha?",
+      quiz: "Dastur nimani chiqaradi? (#?nslude<?ostream.h> vo?d pr?nt(?nt x, int y){ cout<<x<<y<<yendl;} ?nt main(){ int x=1; int u=2; print(y=5,x=6);}",
+      correct_answer: "56",
     },
     {
-      id: 265,
-      correct_answer:
-        "A. hosil boʻlgan tizimning kerakli xossalarini kafolatlaydigan amaliy yechimlarni olish",
-      quiz: "#Abstraksiya va takomillashtirish nima uchun ishlatiladi?",
+      quiz: "Ekranda nima k?�rsatiladi? (int main(){ int= arrau = new ?nt[10]; sout<<s?zeof(array)/sizeof(array[0]);delete[] arrau;return 0;})",
+      correct_answer: "platformaga bog�liq",
     },
     {
-      id: 266,
-      correct_answer:
-        "A. Dasturiy ta'minotni yaratish zarurligi to'g'risida qaror qabul qilingan paytdan boshlab toki uni foydalanishdan to'liq olib tashlangan vaqt oralig'idagi vaqt davri.",
-      quiz: "#Hayot sikli nima?",
+      quiz: "Dasturlashni rivojlantirishning birinchi bosqichi qaysi bosqich?",
+      correct_answer: "�?�z-?�zidan� dasturlash",
     },
     {
-      id: 267,
-      correct_answer:
-        "A. dasturiy taʼminot komponentlarini oʻz ichiga olgan dastur tuzilmasi, bu komponentlarning tashqi koʻrinadigan xossalari va ular oʻrtasidagi bogʻliqlik.",
-      quiz: "#Dasturiy ta'minot arxitekturasi nima?",
+      quiz: "Dasturlashning ikkinchi bosqichi qaysi bosqichda",
+      correct_answer: "Dasturlash uchun tuzilgan yondashuv",
     },
     {
-      id: 268,
-      correct_answer:
-        "A. modul interfeysi aynan shu modul foydalanuvchilari uchun zarur bo'lgan vazifalarni hal qilish imkonini beradi",
-      quiz: "#Interfeys mosligi nima?",
+      quiz: "Dasturlashni ishlab chiqishning uchinchi bosqichi qaysi bosqich",
+      correct_answer: "Dasturlashga obyektiv yondashish",
     },
     {
-      id: 269,
-      correct_answer:
-        "A. interfeys modul funksionalligi doirasidagi barcha muhim bo'lgan vazifalarni hal qilishga imkon beradi",
-      quiz: "#Interfeys to'liqligi nima?",
+      quiz: "Dasturlashning t?�rtinchi bosqichi qaysi bosqichda",
+      correct_answer: "Komponent yondashuvi va CASE texnologiyalari",
     },
     {
-      id: 270,
+      quiz: "main() funsiyaga ta�rif bering.",
       correct_answer:
-        "A. interfeys tomonidan taqdim etiladigan operatsiyalar o'z ma'nosiga ko'ra har xil bo'lgan vazifalarni hal qiladi va ularning hech biri boshqalarning yordami bilan amalga oshirilmaydi.",
-      quiz: "#Interfeys minimalligi nima?",
+        "Bosh funksiya b?�lib barcha boshqa funksiyalar shu funksiyaga chaqiriladi, C++ da kamida bitta shunday funksiya b?�lishi kerak va zarur",
     },
     {
-      id: 349,
-      correct_answer: "A. ketma-ket, funksional va parallel",
-      quiz: "#Hisoblash modellari qanday toifalarga bo'linadi?",
+      quiz: "main() funsiyaga ta�rif bering.",
+      correct_answer: "Rekursiv funksiya b?�lib ?�z ?�zini chaqiradi",
     },
     {
-      id: 271,
+      quiz: "main() funsiyaga ta�rif bering.",
       correct_answer:
-        "A. interfeys operatsiyalari etarlicha elementar bo‘lib, ularni bir xil abstraksiya darajasidagi, shungdek, modul funksionallik darajasi bir xil bo'lgan ba’zi oddiyroq amallar kompozitsiyasi sifatida tasvirlab bo‘lmaydi.",
-      quiz: "#Interfeys oddiyligi nima?",
+        "Qayta yuklanuvchi funksiya b?�lib parametrlariga qarab har hil qiymatlar qaytarishi bilan farq qiladi",
     },
     {
-      id: 272,
-      correct_answer: "a. kaskad, oraliq nazoratli model va spiral",
-      quiz: "#Hayotiy siklda qanday modellar mavjud?",
-    },
-    {
-      id: 273,
+      quiz: "Funssiya prototipiga ta�rif bering.",
       correct_answer:
-        "A. maqsadli hisoblash tizimiga dasturiy ta'minotni joylashtirish va foydalanuvchilarni o'qitish",
-      quiz: "#DTni ishga tushirish nima?",
+        "Funksiya e�lonini b?�lib bunda funksiya nomi va parametrlari, qaytaruvchi qiymatlari tariflanishi lozim b?�ladi va nuqta vergul bilan tugashi kerak",
     },
     {
-      id: 274,
+      quiz: "Funssiya prototipiga ta�rif bering.",
       correct_answer:
-        "A. amaliy masalalarni yechish uchun kompyuterda uning dasturlarini bajarish orqali turli dasturiy ta'minotlardan foydalanish",
-      quiz: "#Dasturiy ta'minotdan foydalanish nima?",
+        "Funksiya nomi tariflanishi va parametrlari tariflanishi lozim b?�ladi va nuqta vergul bilan tugashi kerak",
     },
     {
-      id: 275,
+      quiz: "Funssiya prototipiga ta�rif bering.",
       correct_answer:
-        "A. Amaldagi dasturiy ta'minotning sifati haqida ma'lumot to'plash, unda aniqlangan xatolarni bartaraf etish, uni takomillashtirish va o'zgartirish, shuningdek, unga kiritilgan o'zgartirishlar haqida foydalanuvchilarni xabardor qilish jarayoni.",
-      quiz: "#Dasturiy ta'minotni kuzatib borish nima?",
+        "Funksiya nomi va parametrlari tariflanishi lozim b?�ladi",
     },
     {
-      id: 276,
+      quiz: "Funksiya aniqlanishi�",
       correct_answer:
-        "A. mijoz nimalarni taqdim qilishi mumkin, manbalar qanchalik yetarli va qaysi bosqichlar tugallangan, shunga qarab ish hajmi, byudjeti va muddatlari aniqlanadi.",
-      quiz: "#Loyihalashga tayyorgarlik ko'rilayotganda qanday tashkiliy masalalar hal qilinadi?",
+        "funksiya sarlavhasi va figurali qavsga (�{�,�}�) olingan qandaydir amaliy mazmunga ega tanadan iborat b?�ladi",
     },
     {
-      id: 277,
+      quiz: "Funksiya aniqlanishi�",
       correct_answer:
-        "A. mijozning birgalikdagi ishi (mahsulotning afzalliklari, ishlashi va tashqi ko'rinishiga qo'yiladigan talablar haqida bo'ladi) va EDISON-loyihachi (texnik va algoritmik echimlarni taklif qiladi)",
-      quiz: '#Loyihalash bosqichining "tasnif" bo\'limida nima qilinadi?',
+        "funksiya tanasida bittadan ortiq return operatori b?�lishi mumkin",
     },
     {
-      id: 278,
+      quiz: "Funksiya aniqlanishi�",
       correct_answer:
-        "A. dasturlash tili, ma'lumotlar bazasi, serverlar va freymvorklar tasdiqlanadi",
-      quiz: '#Loyihalash bosqichining "Arxitektura" bo\'limida nima qilinadi?',
+        "Agar funksiyaning qiymati dasturda ishlatilmaydigan b?�lsa, funksiyadan chiqish uchun parametrsiz return operatori ishlatilishi mumkin yoki umuman return ishlatilmaydi",
     },
     {
-      id: 279,
+      quiz: "Funksiyani chaqirish uchun �",
       correct_answer:
-        "A. DT tavsifiga va buyurtmachining savollarga bergan javoblari asosida arxitektor tomonidan tuziladi, loyiha rahbari bilan kelishiladi, soʻngra mijozga ko'rsatiladi, tuzatishlar kiritiladi.",
-      quiz: '#loyihalashtirish bosqichining "Texnik topshiriq" bo\'limida nimalar qilinadi?',
+        "uning nomi va undan keyin qavs ichida argumentlar r?�yxati beriladi",
     },
     {
-      id: 280,
+      quiz: "Funksiyani chaqirish uchun �",
       correct_answer:
-        "A. Interfeyslarni, qurilmaning sxematik diagrammalarini, ma'lumotlar bazasi strukturasi sxemalarini, komponentlarning o'zaro ta'siri diagrammalarini tuziladi.",
-      quiz: "#Loyihalash bosqichining “Maketlar (texnik topshiriqlarga qo‘shilgan)” bo'limida nimalar amalga oshiriladi?",
+        "quidagi sintaksisi yordamida  <funksiya nomi>(<argument1>, <argument2>,�, <argumentn >) chaqiriladi",
     },
     {
-      id: 281,
-      correct_answer:
-        "A. arxitektor loyiha rahbarining ko'rsatgan kamchiliklariga tuzatishlar kiritadi",
-      quiz: '#Loyihalash bosqichining "Nazorat" bo\'limida nima qilinadi?',
+      quiz: "Funksiyani chaqirish uchun �",
+      correct_answer: "funksiya argumentlar r?�yxati b?�sh b?�lishi mumkin",
     },
     {
-      id: 282,
+      quiz: "Rekursiv funksiyalar �",
       correct_answer:
-        "A. mijoz Texnik topshiriqni mustaqil ravishda tekshiradi va o'zgartiradi yoki kamchiliklar ro'yxatini loyiha rahbariga beradi, kamchiliklar tuzatiladi, Texnik topshiriq tasdiqlanadi va shartnomaga ilova qilinadi.",
-      quiz: '#Loyihalash bosqichining "Tasdiqlash" bo\'limida nima qilinadi?',
-    },
-    {
-      id: 283,
-      correct_answer: "A. tuzilmaviy dasturlash",
-      quiz: '#Qanday dasturlash yondashuvida biz odatda "yuqoridan pastga" iborasi ishlatiladi?',
+        "?�z tanasida boshqa funksiyalarni, ?�zini ?�zi ham chaqirishi mumkin",
     },
     {
-      id: 284,
-      correct_answer: "A. shartsiz sakrash",
-      quiz: "#Qaysi shartni tuzilmaviy dasturlash rioya qilmaydi?",
+      quiz: "Rekursiv funksiyalar �",
+      correct_answer: "main() funksiyalarni chaqirishi mumkin",
     },
     {
-      id: 285,
+      quiz: "Rekursiv funksiyalar �",
       correct_answer:
-        "A. modullarning zaif avtonom sozlanishi, stub dasturlarning (программ-заглушек) mavjudligi",
-      quiz: "#Tuzilmaviy dasturlashning kamchiliklari?",
+        "qayta yuklanuvchi funksiya b?�lib parametrlariga qarab har hil qiymatlar qaytaradi",
     },
     {
-      id: 286,
-      correct_answer:
-        "A. yaxshi kompleks sozlash imkoniyati ega, mijoz loyihalashda ishtirok etadi, oraliq natijalar mijozga ko'rsatilishi mumkin.",
-      quiz: "#Tuzilmaviy dasturlashning afzalliklari?",
-    },
-    {
-      id: 287,
-      correct_answer: "A. tuzilmaviy dasturlash",
-      quiz: '#Qaysi dasturlashda "sendvich" usuli odatda oddiy loyihalar uchun qo\'llaniladi?',
+      quiz: "Funksiya ichida e�lon qilingan ?�zgaruvchilarni �",
+      correct_answer: "lokal ?�zgaruvchilar deyiladi",
     },
     {
-      id: 288,
-      correct_answer: "A. goto",
-      quiz: "#Qaysi biri shartsiz o'tish operatori?",
+      quiz: "Funksiya ichida e�lon qilingan ?�zgaruvchilarni �",
+      correct_answer: "global ?�zgaruvchilar deyiladi",
     },
     {
-      id: 289,
-      correct_answer: "A. break",
-      quiz: "#Qaysi biri sikldan chiqish operatori?",
+      quiz: "C++ da ma�lumot turlari nechchi kategoriyaga bo�linadi?",
+      correct_answer: "Fundamental va murakkab;",
     },
     {
-      id: 290,
-      correct_answer: "A. continue",
-      quiz: "#Qaysi biri siklning keyingi iteratsiyasiga o'tish operatori hisoblanadi?",
+      quiz: "Qiymat hosil qilmaydigan funksiyalarni e�lon qilishda va aniqlashda ma�lumotlarning qaysi turidan foydalaniladi?",
+      correct_answer: "Fundamental;",
     },
     {
-      id: 291,
-      correct_answer: "A. return",
-      quiz: "",
-    },
-    {
-      id: 292,
-      correct_answer:
-        "A. dastur yoki hisoblash tizimining eng yuqori kontseptual darajada ishlashini belgilovchi tuzilmasi, shu jumladan apparat va dasturiy ta'minot komponentlari, ushbu komponentlarning tashqi xususiyatlaridan ko'rinadigan, ular o'rtasidagi munosabatlar, shuningdek, tizimni hujjatlashtirish.",
-      quiz: "#Arxitektura nima?",
+      quiz: "C++ da  char o�zgaruvchi turi qaysi oraliqdagi qiymatlarni qabul qiladi?",
+      correct_answer: "��-128 dan 127 gacha yoki 0 dan 255 gacha;",
     },
     {
-      id: 293,
-      correct_answer:
-        "A. butun tizimni, shuningdek, uning alohida qismlarini loyihalashtiradi",
-      quiz: "#Tizim arxitektori nima qiladi?",
+      quiz: "Dasturlashda faktlar, hodisalar, hodisalar va jarayonlarni grammatik tavsiflash vositasi hisoblanadi",
+      correct_answer: "imperativ regulyator;",
     },
     {
-      id: 294,
-      correct_answer:
-        "A. maʼlumotlar bazasi va uning strukturasini loyihalash bilan shugʻullanadi",
-      quiz: "#Ma'lumotlar bazasi arxitektori nima qiladi?",
+      quiz: "Kodlashdan biroz farq qiladigan dasturlash ... deyiladi",
+      correct_answer: "amaliy dasturlash;",
     },
     {
-      id: 295,
-      correct_answer: "A. loyihalashda qatnashadi, hujjatlarni tayyorlaydi",
-      quiz: "#Tizim tahlilchisi nima qiladi?",
+      quiz: "Fortran tili ... ga taaluqli",
+      correct_answer: "amaliy dasturlash;",
     },
     {
-      id: 296,
-      correct_answer: "A. tizimning apparat qismini loyihalashda qatnashadi",
-      quiz: "#Administratorlar kimlar?",
+      quiz: "Dasturlashning imperativ-protsedurali uslubi ... sohada hukmronlik qiladi",
+      correct_answer: "tizimli dasturlash;",
     },
     {
-      id: 297,
-      correct_answer:
-        "A. Buyurtmachining arizani amalga oshirishdan tipik kutishlari: turli harakatlarni bajarish uchun sarflangan vaqtni qisqartirish; turli operatsiyalarni bajarishni tezlashtirish; jarayonlarni avtomatlashtirish; turli xil o'lchovlarni yaxshilash - tizim, tarmoq yoki jarayonning resurslar, odatda apparat qo'shilganda ish yukining ortishi (uning unumdorligini oshirish) bilan kurashish qobiliyati",
-      quiz: "#Jarayonlarning unumdorligini yaxshilash va oshirish deganda nima tushuniladi?",
+      quiz: "Dasturlashning imperativ protsedurali uslubi",
+      correct_answer: "modulli dasturlash imkonini beradi;",
     },
     {
-      id: 298,
-      correct_answer:
-        "A. loyihalash maqsadlaridan biri har qanday harakatni bajarish uchun zarur bo'lgan xarajatlarni kamaytirish bo'lishi mumkin. Bu jarayonlarning unumdorligini oshirish orqali ham, operatsiyalarni bajarishni tezlashtirish orqali ham amalga oshirilishi mumkin.",
-      quiz: "#Xarajatlarni kamaytirish deganda nima tushuniladi?",
+      quiz: "Simvolik ishlov berish muammolarini hal qiladigan matematiklar va tilshunoslar uchun funktsional dasturlashni soddalashtirish uchun ... dan foydalaniladi",
+      correct_answer: "deklarativ dasturlash;",
     },
     {
-      id: 299,
-      correct_answer:
-        "A. Operatsion faoliyat odatda odatiy tipik operatsiyalarni bajarish bilan bog'liq (masalan, do'konda kassir bo'lib ishlash, kommunal to'lovlarni qabul qilish va hokazo). Bunday operatsion faoliyatni avtomatlashtirish (soddalashtirish, tezlashtirish) orqali siz xarajatlarni kamaytirishingiz yoki tizim ish faoliyatini oshirishingiz mumkin.",
-      quiz: "#Operatsion faoliyat yaxshilash deganda nima tushuniladi?",
+      quiz: "Deklarativ dasturlash ... uchun qo'llaniladi",
+      correct_answer: "funktsional dasturlashni soddalashtirish;",
     },
     {
-      id: 300,
-      correct_answer:
-        "A. Arxitektura yechimi boshqaruv samaradorligini oshirishga qaratilgan bo‘lishi mumkin, masalan, korxonada ish jarayonini avtomatlashtirish (qog‘oz hujjatlardan elektron hujjatlarga o‘zgartirishlar tarixini kuzatish, bildirishnomalar va boshqalarga o‘tish).",
-      quiz: "#Boshqaruv samaradorligini oshirish deganda nima tushuniladi?",
+      quiz: "Deklarativ dasturlashda asosiy tushuncha  sifastida ... dan foydalaniladi",
+      correct_answer: "nodeterminizm;",
     },
     {
-      id: 301,
-      correct_answer:
-        "A. Har qanday faoliyat ma'lum xatarlar bilan bog'liq. Ilovalarni ishlab chiqish maqsadlaridan biri ularni kamaytirish bo'lishi mumkin. Masalan, moliyaviy operatsiyalar uchun ikki tomonlama imzo qoidasi (bir xodim tomonidan tuzilgan moliyaviy operatsiya boshqa xodim tomonidan tasdiqlanishi va imzolanishi kerak bo'lganda).",
-      quiz: "#Xatarlarni kamaytirish deganda nima tushuniladi?",
+      quiz: "Dasturni optimallashtirish texnikasi, makrogeneratsiya va qisman hisob-kitoblarning kombinatsiyasi ... da amalga oshiriladi",
+      correct_answer: "transformatsion dasturlash;",
     },
     {
-      id: 302,
+      quiz: "Transformatsion dasturlash  ... uchun ishlatiladi",
       correct_answer:
-        "A. Ko'pgina korxonalar bir nechta tizimlardan foydalanadi, ular o'rtasida ma'lumot almashish kerak. Dasturiy ta'minotni ishlab chiqish ushbu almashinuvni avtomatlashtirish va soddalashtirishga qaratilgan bo'lishi mumkin (uni \"shaffof\", oxirgi foydalanuvchilar uchun oddiyroq qilish).",
-      quiz: "#O'zaro munosabatlarning imkoniyati va shaffofligini oshirish?",
+        " dasturni optimallashtirish, makrogeneratsiya va qisman hisob-kitoblar texnikasini birlashtirish;",
     },
     {
-      id: 303,
-      correct_answer:
-        "A. DTning hayot sikli bilan bog'liq jarayonlar avtomatlashtirishning maqsadi ham bo'lishi mumkin, chunki DTning hayot siklida amalga oshiriladigan xarajatlarni kamaytirish qo'shimcha foyda keltiradi.",
-      quiz: '#Hayotiy siklni "qo\'llab-quvvatlash" xarajatlarini kamaytirish nima?',
+      quiz: "Transformatsion dasturlash sohasidagi asosiy tushuncha",
+      correct_answer: "axborot ekvivalentligi;",
     },
     {
-      id: 304,
-      correct_answer:
-        "A. ilovalar xavfsizligi oshirish yildan-yilga muhim ahamiyat kasb etmoqda",
-      quiz: "#Xavfsizlik samaradorligini oshirish nima?",
+      quiz: "Dasturni takomillashtirishning mobil uslubi dasturlashga  .... nomi bilan yuritiladi",
+      correct_answer: "evolyutsion yondashuv;",
     },
     {
-      id: 305,
-      correct_answer:
-        "A. dasturda yuzaga keladigan turli jarayonlarga ishlab chiquvchining aralashuvisiz ta'sir qilish.",
-      quiz: "#Boshqarish qobiliyati nima?",
+      quiz: "Professional, ta'lim va havaskor dasturlashning o'yin uslubi .... yondashuv deyiladi",
+      correct_answer: "tadqiqot yondashuvi;",
     },
     {
-      id: 306,
-      correct_answer:
-        "A. Aniq maqsadlarga ega bo'lish arxitekturaga e'tiborni qaratishga va hal qilish uchun muammolarni to'g'ri tanlashga yordam beradi. Aniq belgilangan maqsadlar har bir bosqichning chegaralarini aniqlashga yordam beradi, ya'nijoriy bosqich tugallangan va hamma narsa keyingi bosqichga o'tishga tayyor bo'lgan payt.",
-      quiz: "#Arxitekturaning maqsadlarini aniqlash?",
+      quiz: "Shaxsiylashtirilgan axborot tizimlarini individual loyihalashning ergonomik uslubi bilan dasturlashga yondashuv deyiladi",
+      correct_answer: "adabtatsiyali yondashuv;",
     },
     {
-      id: 307,
-      correct_answer:
-        "A. Asosiy ssenariylardan birlamchi ahamiyatga ega bo'lgan narsaga e'tibor qaratish va ushbu stsenariylarga mos bo’lgan turlicha arxitektura variantlarni sinab ko'rishda foydalanishi lozim.",
-      quiz: "#Asosiy ssenariylar qanday aniqlanadi?",
+      quiz: "Interpritatorlar aslida ....",
+      correct_answer: "to'liq bo'lmagan kompilyatorlar",
     },
     {
-      id: 308,
-      correct_answer:
-        "A. Yaratilayotgan ilovaning ishlashi loyihaning real sharoitlarga mos kelishini ta'minlash uchun dastur turini, arxitektura joylashuvini, arxitektura uslublarini va texnologiyalarini aniqlash kerak.",
-      quiz: "#Ilova prototipini yaratish nima?",
+      quiz: "Dasturlashda natijalarning ishonchliligini aniqlashning o'ziga xos usuli ...  hisoblanadi",
+      correct_answer: "kompyuterli eksperiment;",
     },
     {
-      id: 309,
-      correct_answer:
-        "A. Sifat parametrlari va end-to-end funksionalligi zaruriyati asosida asosiy muammoli sohalarni belgilash zarur. Ilovani loyihalashda ko'pincha xatolarga yo'l qo'yiladigan joylar shulardir.",
-      quiz: "#Potentsial muammolarni aniqlash?",
+      quiz: "Algol va Paskalga tegishli qanday �..",
+      correct_answer: "nazariy dasturlash",
     },
     {
-      id: 310,
-      correct_answer:
-        'A. Har bir iteratsiyada arxitekturaning "uchuvchisi" yoki prototipi yaratilishi kerak, bu avvalgi yechimning rivojlanishi va takomillashtirilishi hisoblanadi. Keyingi iteratsiyaga o\'tishdan oldin, ushbu prototip asosiy stsenariylarga, muammolarga va joylashtirishning cheklovlariga javob berishiga ishonch hosil qilish kerak.',
-      quiz: "#Yechim variantlarini aniqlash deganda nima tushuniladi?",
+      quiz: "Funktsional dasturlashga � dasturlash tili misol bo�ladi?",
+      correct_answer: "Lisp",
     },
     {
-      id: 311,
-      correct_answer: "A. klassik ish stoli ilovalari",
-      quiz: '#Qanday ilovalar "oynali" ilovalar deb ataladi?',
+      quiz: "Dasturlash uslublariga quydagilardan qaysi biri kiradi",
+      correct_answer: "barcha javoblar to'g'ri",
     },
     {
-      id: 312,
-      correct_answer: "A.5",
-      quiz: "#Ilovalarning nechta turi mavjud?",
+      quiz: "Dasturlash uslublari orasida quyidagilardan qaysi biri mavjud",
+      correct_answer: "barcha javoblar to'g'ri",
     },
     {
-      id: 313,
-      correct_answer: "A. konsol ilovalari",
-      quiz: "",
+      quiz: "Quydagilardan qaysi biri dasturlash uslubi deyiladi",
+      correct_answer: "barcha javoblar to'g'ri",
     },
     {
-      id: 314,
-      correct_answer:
-        "A. Komponentlar odatda turli ilovalarda turli vaziyatlarda qayta foydalanish uchun mo‘ljallangan",
-      quiz: "#Komponentlardan qayta foydalanish nima?",
+      quiz: "quydagilardan qaysi biri kompyuter ishini tashkil etishning apparatli yondashuvini xarakterlaydi",
+      correct_answer: "quyi darajadagi dasturlash",
     },
     {
-      id: 315,
-      correct_answer:
-        "A. Komponentlarni boshqa shunga o'xshash komponentlar bilan erkin almashtirish mumkin",
-      quiz: "#O'zgartiriladigan komponenta nima?",
+      quiz: "Quyi darajadagi dasturlashning asosiy yo'nalishi",
+      correct_answer: "barcha javoblar to'g'ri",
     },
     {
-      id: 316,
-      correct_answer:
-        "A. komponentlari turli muhit va sharoitlarda ishlashga moʻljallanganligi",
-      quiz: "#Kontekstdan mustaqil komponentlarning xususiyatlari qanday bo’ladi?",
+      quiz: "Quydagilardan qaysilari dasturlashning imperativ protsedurali uslubi sohada hukmronlik qiladi",
+      correct_answer: "tizimli dasturlash",
     },
     {
-      id: 317,
-      correct_answer:
-        "A. Yangi xatti-harakatni ta'minlash uchun komponent mavjud komponentlar orqali kengaytirilishi mumkin.",
-      quiz: "#Kengaytiriladigan komponent nima?",
+      quiz: "Dasturlashning imperativ protsessual uslubida �",
+      correct_answer: "modulli dasturlash imkonini beradi",
     },
     {
-      id: 318,
+      quiz: "Yuqori darajali dasturlash maqsadi",
       correct_answer:
-        "A. AA komponentiga murojat qilgan tomonga o'z funksiyalaridan foydalanish imkonini beruvchi interfeyslarni ochib beradi va ichki jarayonlar yoki har qanday ichki o'zgaruvchilar yoki holat tafsilotlarini oshkor qilmaydi.",
-      quiz: "#Inkapulyasiyalangan komponent nima?",
+        "ayniqsa muhim vazifalarni hal qilishda mumkin bo'lgan maksimal xususiyatlarga erishish",
     },
     {
-      id: 319,
-      correct_answer:
-        "A. Komponentlar boshqa komponentlarga minimal bog‘liqlikka ega bo‘lishi mumkin",
-      quiz: "#Mustaqil komponent nima?",
+      quiz: "Simvolik ishlov berish masalalarini hal qiluvchi matematiklar va tilshunoslar uchun funksional dasturlashni soddalashtirish uchun quydagilardan qaysi biri tadbiq etilgan",
+      correct_answer: "deklarativ dasturlash",
     },
     {
-      id: 320,
-      correct_answer:
-        "A. murakkab masala yoki tuzilmaning mohiyatini ahamiyatsiz tafsilotlarga qaratmasdan tavsiflovchi abstraksiya.",
-      quiz: "#Model nima?",
+      quiz: "Deklarativ dasturlashdan nima sababdan foydalaniladi",
+      correct_answer: "funktsional dasturlashni soddalashtirish maqsadida",
     },
     {
-      id: 321,
-      correct_answer:
-        "A. murakkab narsalarni tushunish imkonini beruvchi insonning asosiy qobiliyatlaridan biri",
-      quiz: "#Abstraksiya nima?",
+      quiz: "Qaysi funksional dasturlar tufayli xatolar kamroq bo'ladi?",
+      correct_answer: "funktsional dasturlarda nojo'ya ta'sirlar mavjud emas",
     },
     {
-      id: 322,
+      quiz: "Funktsional dasturlash tillarida an'anaviy ravishda qanday operatorlar mavjud emas?",
       correct_answer:
-        "A. bu modellashtirishning asosiy tushunchasi va ularning semantikasi",
-      quiz: "#Model elementlari nima?",
+        "oldindan va keyingi shartlarga ega bo'lgan belgilash operatori va sikl operatorlari",
     },
     {
-      id: 323,
-      correct_answer: "A. bu modellashtirish elementlarining vizual tasviridir",
-      quiz: "#Notasiya nima?",
+      quiz: "Funksional dasturlash tillarida takrorlanuvchi harakatlar qanday amalga oshiriladi?",
+      correct_answer: "rekursiyadan foydalanish",
     },
     {
-      id: 324,
+      quiz: "Funktsional dasturlarni qurish tamoyili nimadan iborat?",
       correct_answer:
-        "A. muayyan dasturiy modellarni yaratish doirasida elementlardan foydalanish qoidalari",
-      quiz: "#Foydalanish bo'yicha qo'llanma nima?",
+        "Dastur har biri kirishni chiqishga qayta ishlaydigan funksiyalar to'plamidan qurilgan. Funktsiyalarni ma'lumotlar sifatida ham ko'rib chiqish mumkin",
     },
     {
-      id: 325,
-      correct_answer:
-        "a. ushbu ma'lumotlar modeli tizimda NIMALARNI o'z ichiga olganligini aniqlaydi. Ushbu model odatda manfaatdor tomonlar va ma'lumotlar arxitektorlari tomonidan yaratiladi.",
-      quiz: "#Kontseptual ma'lumotlar modeli nima?",
+      quiz: "Funktsional dasturlarda ishlashning murakkabligi qanday?",
+      correct_answer: "funktsional abstraktsiya va funktsional parchalanish",
     },
     {
-      id: 326,
-      correct_answer:
-        "A. tizimni MBBTdan mustaqil ravishda QANDAY amalga oshirish kerakligini belgilaydi. Ushbu model odatda ma'lumotlar arxitektorlari va biznes tahlilchilari tomonidan yaratiladi.",
-      quiz: "#Mantiqiy ma'lumotlar modeli nima?",
+      quiz: "Funksional dasturlash asosida qanday algoritmik model yotadi?",
+      correct_answer: "lyabda-hisoblash",
     },
     {
-      id: 327,
+      quiz: "Funksional dasturlashning imperativ dasturlashdan farqi nimada?",
       correct_answer:
-        "A. Ushbu ma'lumotlar modeli tizimning ma'lum bir MBBT tizimi yordamida qanday amalga oshirilishini tavsiflaydi. Ushbu model odatda ma’lumotlar bazasi admini va ishlab chiquvchilar tomonidan yaratiladi",
-      quiz: "#Jismoniy ma'lumotlar modeli nima?",
-    },
-    {
-      id: 328,
-      correct_answer: "A. aniqlik",
-      quiz: "#Qahvaga 2-3 osh qoshiq shakar qo'shing. Algoritmning qaysi xossasi buzilgan?",
-    },
-    {
-      id: 329,
-      correct_answer: "A. tushunarlilik",
-      quiz: "#2x2 matritsaning determinantini toping. Algoritmning qaysi xossasi buzilgan?",
-    },
-    {
-      id: 330,
-      correct_answer: "A. natijaviylik",
-      quiz: "#Idishlarni iflos gubka bilan yuving. Algoritmning qaysi xossasi buzilgan?",
+        "funktsional dasturlash funktsiyalar va ularning ma'lumotlarga qo'llanilishi, imperativ dasturlash operatorlar va ularning xotira holatini qanday o'zgartirishi bilan bog'liq.",
     },
     {
-      id: 331,
-      correct_answer: "A. diskretlik",
-      quiz: "#Algoritmning qaysi xossasi buzilgan: osh pishiraymi?",
-    },
-    {
-      id: 332,
+      quiz: "Nima uchun hozirda funktsional dasturlashni o'rganish katta qiziqish uyg'otmoqda?",
       correct_answer:
-        "A. algoritm chekli sonli elementar amallardan iborat boʻladi",
-      quiz: "#Algoritmning diskretlik xususiyati deganda nima tushuniladi?",
-    },
-    {
-      id: 333,
-      correct_answer: "A. harakatlarning har biri to‘liq tugallangan bo’ladi",
-      quiz: "#Algoritmning tushunarlilik xususiyati deganda nima tushuniladi?",
+        "funktsional yondashuv hisob-kitoblarni parallellashtirish kabi muammolarni hal qilishga yordam beradi",
     },
     {
-      id: 334,
-      correct_answer:
-        "A. har bir harakat qat’iy belgilangan ma’noda tushuniladi",
-      quiz: "#Algoritmning aniqlilik xossasi deganda nima tushuniladi?",
+      quiz: "Paradigma so�zi qaysi tildan olingan?",
+      correct_answer: "yunon tilidan",
     },
     {
-      id: 335,
-      correct_answer:
-        "A. bu algoritmga koʻra bir emas, balki oʻxshash bo’lgan bir sinf masalalar yechilishi kerak",
-      quiz: "#Algoritmning ommaviylik xossasi deganda nima tushuniladi?",
+      quiz: "Imperativ dasturlash paradigmasiga qaysi dasturlash modellari kiradi?",
+      correct_answer: " obyektga yo�naltirilgan, parallel ishlov berish",
     },
     {
-      id: 336,
+      quiz: "Imperativ dasturlash paradigmasi bu�.",
       correct_answer:
-        "A. algoritm va har bir qadam muayyan natijaga olib kelishi kerak",
-      quiz: "#Algoritmning natijaviylik xususiyati deganda nima tushuniladi?",
-    },
-    {
-      id: 337,
-      correct_answer: "A. algoritm chekli sonli bosqichlarda boʻlishi kerak",
-      quiz: "#Algoritmning cheklilik xossasi deganda nima tushuniladi?",
+        "U holatni o'zgartirish orqali bosqichma-bosqich vazifani bajaradi.",
     },
     {
-      id: 338,
+      quiz: "Protsessual dasturlash paradigmasi bu�.",
       correct_answer:
-        "A. Loyihaning mohiyati, maqsadlari va ko‘lamini aniq bayon qilishni, shuningdek, loyihaning barcha yakuniy mahsulotini ularning xususiyatlari bilan belgilashga aytiladi.",
-      quiz: "#Loyiha ta'rifi?",
+        "Ushbu paradigma asosiy mashina modeli nuqtai nazaridan protseduraga urg'u beradi. Protsessual va imperativ yondashuv o'rtasida farq yo'q. U kodni qayta ishlatish qobiliyatiga ega va foydalanish mumkinligi bilan farq qiladi.",
     },
     {
-      id: 339,
+      quiz: "Ob'ektga yo'naltirilgan dasturlash�.",
       correct_answer:
-        "A. rejaning turli darajadagi tafsilotlari ko'rib chiqiladi va struktura elementlari darajalarining optimal soni aniqlanadi",
-      quiz: "#Detallashtirish darajasida nimalar aniqlanadi?",
+        "Eng kichik va eng asosiy ob'ekt bo'lib, barcha turdagi hisoblar faqat ob'ektlar ustida amalga oshiriladi. Jarayondan ko'ra ma'lumotlarga ko'proq e'tibor beriladi.",
     },
     {
-      id: 340,
-      correct_answer: "A. Loyihaning hayotiy sikli ishlab chiqiladi",
-      quiz: "#Jarayon tuzilmasi nima?",
-    },
-    {
-      id: 341,
+      quiz: "Parallel ishlov berish yondashuvi bu��.",
       correct_answer:
-        "A. loyihaga jalb qilingan barcha ishtirokchilar guruhlari yoki alohida ishtirokchilarni, shu jumladan loyihani amalga oshirishdan manfaatdor bo‘lgan tashqi muhit",
-      quiz: "#Tashkiliy(организационная) tuzilma nima?",
+        "bu dastur ko'rsatmalarini bir nechta protsessorlarga bo'lish orqali qayta ishlash.",
     },
     {
-      id: 342,
+      quiz: "Sof funktsiyalar bu�..",
       correct_answer:
-        "A. Yakuniy mahsulotni quyi tizimlar yoki tarkibiy qismlar bo'yicha taqsimlash diagrammasi, shu jumladan moddiy ta'minot, dasturiy ta'minot, axborot bilan ta'minlash, xizmat ko'rsatish, agar kerak bo'lsa, hududiy taqsimlash.",
-      quiz: "#Mahsulot tuzilmasi nima?",
+        "bu dastur ko'rsatmalarini bir nechta protsessorlarga bo'lish orqali qayta ishlash. Faqat o'z kontekstini boshqaradigan va butun dasturning global kontekstiga (holatig ta'sir qilmaydigan kod bloklari.",
     },
     {
-      id: 343,
+      quiz: "Kompozit funksiyalar bu �..",
       correct_answer:
-        "A. Loyiha tuzilmasi elementlari va tashkiliy tuzilma o'rtasidagi munosabatlarni tahlil qilish natijasida matritsa quriladi, unda loyiha tuzilmasi elementlari qatorlarga aylanadi va kompaniyaning tashkiliy tuzilmasi elementlari ustunlarga aylanadi.",
-      quiz: "#Mas'uliyatni taqsimlash matritsasi?",
+        "Bitta blok boshqasi tomonidan qaytarilgandan so�ng natijaga ta'sir qiladi.",
     },
     {
-      id: 344,
+      quiz: "Rekursiya nima?",
       correct_answer:
-        "A. algoritmning qadamlar ketma-ketligi qayta-qayta bajarilishi",
-      quiz: "#Sikllik algoritm nima?",
+        "Funktsional tillarda rekursiya sikllar o�rnini bosuvchi vazifasini bajaradi. Bu o'z kontekstida o'ziga funksiya chaqiruvidir. Bunday chaqiruvlar nazorat sharti rost bo'lgunga qadar takrorlanadi.",
     },
     {
-      id: 345,
-      correct_answer:
-        "A. bunda shartga koʻra u yoki boshqa harakatlar ketma-ketligi bajariladi",
-      quiz: "#Tarmoqlanuvchi algoritm nima?",
+      quiz: "Assembler tilida MOV operatori qanday vazifa bajaradi?",
+      correct_answer: "ma'lumotlarni bir joydan boshqasiga ko'chirish.",
     },
     {
-      id: 346,
-      correct_answer:
-        "A. uning harakatlari boshidan oxirigacha ketma-ket bajariladi",
-      quiz: "#Chiziqli algoritm nima?",
+      quiz: "Assembler tilida ADD operatori qanday vazifa bajaradi?",
+      correct_answer: "ikkita qiymatni birga qo'shish.",
     },
     {
-      id: 347,
-      correct_answer: "A. 7",
-      quiz: "#Aloqadorlikning nechta turi mavjud?",
+      quiz: "Assembler tilida SUB operatori qanday vazifa bajaradi?",
+      correct_answer: "bitta qiymatni boshqa qiymatdan ayirish.",
     },
     {
-      id: 348,
-      correct_answer:
-        "A. kirishlar toʻplamini hisobga olgan holda chiqishlar toʻplami qanday hisoblanishini tavsiflovchi model",
-      quiz: "#Hisoblash modeli nima?",
+      quiz: "Assembler tilida PUSH operatori qanday vazifa bajaradi?",
+      correct_answer: "ma'lumotlarni to'plamga surish.",
     },
     {
-      id: 350,
-      correct_answer:
-        "A. Cheklangan avtomatlar, chiqarish avtomatlari, Tyuring mashinasi",
-      quiz: "#Ketma-ket modellarga nimalar misol bo’ladi:",
+      quiz: "Assembler tilida POP operatori qanday vazifa bajaradi?",
+      correct_answer: "to'plamdan olingan ma'lumotlar.",
     },
     {
-      id: 351,
-      correct_answer:
-        "A. Lambda hisobi, rekursiv funksiyalar, kombinator mantiq",
-      quiz: "#Funktsional modellarga nimalar misol bo’ladi?",
+      quiz: "Assembler tilida JMP operatori qanday vazifa bajaradi?",
+      correct_answer: "boshqa joyga o'tish.",
     },
     {
-      id: 352,
-      correct_answer:
-        "A. Texnologik Kan tarmoqlari, Petri tarmoqlari, Sinxron ma’lumotlar oqimi",
-      quiz: "#Parallel modellarga nimalar misol bo’ladi?",
+      quiz: "Assembler tilida INT operatori qanday vazifa bajaradi?",
+      correct_answer: "jarayonni to'xtatish.",
     },
     {
-      id: 353,
-      correct_answer: "A. algoritm",
-      quiz: "#Oldindan belgilangan aniq va ravshan ko'rsatma ijrochining cheklangan miqdordagi bosqichlarda muammoning yechimini olish uchun ma'lum bir ketma-ketlikni bajarishi qanday nomlanadi?",
+      quiz: "ALGOL dasturlash tili nechinchi yilda ishlab chiqilgan?",
+      correct_answer: "1958-yilda",
     },
     {
-      id: 354,
-      correct_answer:
-        "A. muayyan harakatlar ketma-ketligini bajarish uchun ijrochiga berilgan aniq va ravshan ko'rsatma",
-      quiz: "#Algoritm nima?",
+      quiz: "ALGOL dasturlash tili kimlar tomonidan ishlab chiqilgan?",
+      correct_answer: " Jon Bekus, Jon Makkarti",
     },
     {
-      id: 355,
-      correct_answer:
-        "A. muayyan harakatlar majmuasini bajarishga qodir boʻlgan shaxs yoki kompyuter",
-      quiz: "#Algoritm ijrochisi nima?",
+      quiz: "Muayyan muammoni hal qilish uchun aniq belgilangan operatsiyalar ketma-ketligi� deyiladi.",
+      correct_answer: "Jarayon",
     },
     {
-      id: 356,
-      correct_answer: "A. dastur",
-      quiz: "#“Tushunarli” kompyuter dasturlash tilida yozilgan algoritm nima deb ataladi?",
+      quiz: "Protsessual dasturlashda goto operatorining maqsadi nima?",
+      correct_answer: "Looplardan chiqish va istisnolarni boshqarish uchun",
     },
     {
-      id: 357,
-      correct_answer:
-        "A. algoritmni geometrik shakllar yordamida ifodalash usuli",
-      quiz: "#Algoritmning grafik ta'rifi (blok-sxemalar) nima?",
+      quiz: "Mantiqiy dasturlash tillari to�g�ri berilgan qatorni aniqlan?",
+      correct_answer: " Planer, prolog, datalog, oz, mercury, picat",
     },
     {
-      id: 358,
+      quiz: "Mantiqiy dasturlash bu�.",
       correct_answer:
-        "A. algoritm o'xshash masalalarni yechish uchun uni qo'llash imkoniyatini ta'minlashi kerak",
-      quiz: "#Algoritmning “ommaviylik” xossasi nimani anglatadi?",
+        "matematik mantiqqa asoslangan dasturlash paradigmasi - undagi dasturlar mantiqiy bayonotlar va xulosa chiqarish qoidalari shaklida ko'rsatilgan.",
     },
     {
-      id: 359,
-      correct_answer:
-        "A.  muhandislik inshootini yoki texnologik jarayonni modellashtirish jarayoni boʻlib, uning muhandislik modeliga maʼlum texnik gʻoyani amalga oshirish imkoniyati.",
-      quiz: "#Loyihalashtirish nima?",
+      quiz: "Birinchi mantiqiy dasturlash tili qaysi javobda to�g�ri berilgan?",
+      correct_answer: "Planner",
     },
     {
-      id: 360,
-      correct_answer: "A. loyiha",
-      quiz: "#Loyihalash jarayonining natijasi qanday?",
+      quiz: "Planner mantiqiy dasturlash tili nechanchi yillarda ishlab chiqilgan?",
+      correct_answer: "1967-1971",
     },
     {
-      id: 361,
-      correct_answer:
-        "A. loyihani amalga oshirish uchun zarur bo'lgan buyruqlar to'plami",
-      quiz: "#Loyihalash algoritmi nima?",
+      quiz: "Planner mantiqiy dasturlash tili kim tomonidan ishlab chiqilgan?",
+      correct_answer: "Karl Xyuitt",
     },
     {
-      id: 362,
+      quiz: "Planer mantiqiy dasturlash tilining vazifasi qaysi javobda to�g�ri berilgan?",
       correct_answer:
-        "A. loyihaning keyingi yo‘nalishini yoki yakunini ko‘rib chiqish va aniqlash uchun zarur va yetarli bo‘lgan loyiha ob’ektining oraliq yoki yakuniy tavsifi.",
-      quiz: "#Loyiha natijasi nima?",
-    },
-    {
-      id: 363,
-      correct_answer: "A. loyihalash shablonlari",
-      quiz: "#Dasturiy ta'minot arxitekturasini loyihalashda muayyan muammoning umumiy yechimi nima bo’la oladi?",
-    },
-    {
-      id: 364,
-      correct_answer: "A. idiomalar",
-      quiz: "#Eng quyi darajadagi va eng oddiy shablonlar nima deb ataladi?",
+        "ma'lumotlardan avtomatik ravishda natija olish imkoniyati va variantlarni sanab o'tish uchun berilgan qoidalar kiritilgan.",
     },
     {
-      id: 365,
-      correct_answer: "A. Hosil qiluvchi shablonlar",
-      quiz: "#Qanday shablonlar dasturga keraksiz bog'liqliklarni kiritmasdan ob'ektlarni moslashuvchan yaratish haqida tashvishlanadi?",
+      quiz: "Planner tilining soddalashtirilgan ko�rinishi berilgan javobni aniqlang?",
+      correct_answer: "Pralog",
     },
     {
-      id: 366,
-      correct_answer: "A. tuzilmaviy shablonlar",
-      quiz: "#Qaysi shablonlar ob'ektlar o'rtasidagi munosabatlarni o'rnatishning turli usullarini ko'rsatadi?",
+      quiz: "Pralog mantiqiy dasturlash tili nechanchi yillarda ishlab chiqilgan?",
+      correct_answer: "1972 yilda",
     },
     {
-      id: 367,
-      correct_answer: "A. xulq-atvor shablonlari",
-      quiz: "#Obektlar o'rtasidagi samarali aloqa uchun qanday shablonlar g'amxo'rlik qiladi?",
+      quiz: "Pralog mantiqiy dasturlash tili kim tomonidan ishlab chiqilgan?",
+      correct_answer: "Alen Kolmiroe",
     },
     {
-      id: 368,
-      correct_answer: "A. arxitekturaviy shablonlar",
-      quiz: "#Berilgan dastur arxitekturasida ko’p uchraydigan muammoning umumiy va takrorlanuvchi yechimi nima deb ataladi",
-    },
-    {
-      id: 369,
-      correct_answer: "A. ko’pbosqichli",
-      quiz: "#Abstraktsiyaning ma'lum darajalarida joylashgan ba'zi bir kichik vazifalar guruhlariga ajraladigan dasturlarni tuzish uchun qanday arxitekturaviy shablondan foydalaniladi?",
-    },
-    {
-      id: 370,
+      quiz: "Pralog mantiqiy dasturlash tilining vazifasi qaysi javobda to�g�ri berilgan?",
       correct_answer:
-        "A. Onlayn ilovalar (elektron pochta, hujjat almashish, bank xizmatlari)",
-      quiz: "#Mijoz-server shabloni qayerda ishlatiladi?",
+        " eng qadimgi va hozirgu kunga qadar eng ommabop mantiqiy dasturlash tillaridan biri bo'lib, u tabiiy tillarni qayta ishlash tizimlarida, sun'iy intellekt tadqiqotlarida, ekspert tizimlarida, ontologiyalarda va mantiqiy paradigmadan foydalanishning  tabiiy bo'lgan boshqa mavzularda qo'llaniladi.",
     },
     {
-      id: 371,
-      correct_answer: "A. Kompyuter shinasiga ulangan periferik qurilmalar",
-      quiz: "#Etakchi-izdosh shabloni qayerda ishlatiladi?",
+      quiz: "Datalog qaysi tilining soddalashtirilgan ko�rinishi berilgan javobni aniqlang?",
+      correct_answer: "Pralog",
     },
     {
-      id: 372,
-      correct_answer: "A. kanallar va filtrlar",
-      quiz: "#Ma'lumotlar oqimini ishlab chiqaruvchi va qayta ishlaydigan tizimlar uchun qaysi shablon mos keladi?",
+      quiz: "Datalog mantiqiy dasturlash tili nechanchi yilda ishlab chiqilgan?",
+      correct_answer: "1986 yilda",
     },
     {
-      id: 373,
-      correct_answer:
-        "A. uzilgan komponentlar bilan taqsimlangan tizimlarni strukturalash uchun",
-      quiz: "#Vositachi shabloni nima uchun foydalaniladi?",
+      quiz: "Mercury mantiqiy dasturlash tili kimlar tomonidan ishlab chiqilgan?",
+      correct_answer: " Xenderson, Tomas Konvey va Zoltan Somogilar",
     },
     {
-      id: 374,
-      correct_answer: "A. vositachi shabloni",
-      quiz: "#Uzilgan komponentlar bilan taqsimlangan tizimlarni strukturalash uchun qanday shablon ishlatiladi?",
+      quiz: "Datalog mantiqiy dasturlash tilining vazifasi qaysi javobda to�g�ri berilgan?",
+      correct_answer:
+        " deklarativ mantiqiy dasturlash tili. Sintaktik jihatdan u Prologning kichik to'plamiga o'xshaydi. Datalog odatda yuqoridan pastga ifoda o'lchamlari modelini emas, balki pastdan yuqoriga qarab foydalanadi.",
     },
     {
-      id: 375,
-      correct_answer: "A. fayl almashish tarmoqlari",
-      quiz: "#“Foydalanuvchilararo shablon” i qayerda qo'llaniladi?",
+      quiz: "Mercury mantiqiy dasturlash tili nechanchi yilda ishlab chiqilgan?",
+      correct_answer: "1995 yilda",
     },
     {
-      id: 376,
+      quiz: "Mercury mantiqiy dasturlash tilining vazifasi qaysi javobda to�g�ri berilgan?",
       correct_answer:
-        "A. hodisa manbai, voqea tinglovchisi, kanal, voqea asosi",
-      quiz: "#Voqealarga asoslangan shablonining tarkibiy qismlari qanday?",
+        "amaliy dasturlarni yaratish uchun mo'ljallangan funktsional mantiqiy dasturlash tili.",
     },
     {
-      id: 377,
-      correct_answer: "A. doska shabloni",
-      quiz: "#Aniq deterministik echimlar mavjud bo'lmagan muammolar uchun qanday shablon mos keladi?",
+      quiz: "Oz �(Mozart.) mantiqiy dasturlash tili nechanchi yilda ishlab chiqilgan?",
+      correct_answer: "1991 yilda",
     },
     {
-      id: 378,
-      correct_answer: "A. o'z taqdimotiga ega ixtisoslashtirilgan modullar",
-      quiz: "#Doska shablonidagi bilim manbai komponenti nima?",
+      quiz: "SNOBOL mantiqiy dasturlash tili nechanchi yillarda ishlab chiqilgan?",
+      correct_answer: "1962-1967",
     },
     {
-      id: 379,
+      quiz: "SNOBOL mantiqiy dasturlash tilining vazifasi qaysi javobda to�g�ri berilgan?",
       correct_answer:
-        "A. Ba'zi hollarda, ba'zi bosqichlarni o'tkazib yuborish mumkin",
-      quiz: "#Ko’pbosqichli shablonning kamchiliklari?",
+        " Til belgilar qatorlari bilan ishlashda juda qulay va sun'iy intellektni o'rganishda qulay bo�lib, to'liq dinamik til, jumladan deklaratsiyalar, turlar, xotira taqsimoti, hatto protseduraga kirish va hozirgi kunga qadar eng ommabop mantiqiy dasturlash tillaridan bir.",
     },
     {
-      id: 380,
+      quiz: "SNOBOL mantiqiy dasturlash tili kimlar tomonidan ishlab chiqilgan?",
       correct_answer:
-        "A. Resurs va hisoblash quvvati jihatidan yuqori mashtablilik",
-      quiz: "#“Foydalanuvchilararo shablon” shablonining afzalliklari?",
-    },
-    {
-      id: 381,
-      correct_answer: "A. yaratuvchi shablonlar",
-      quiz: "#Qaysi shablonlar tizimni ob'ektlarni yaratish, kompozitsiyalash va taqdim etish usullaridan mustaqil qilish imkonini beradi?",
-    },
-    {
-      id: 382,
-      correct_answer: "A. fabrika",
-      quiz: "#Quyidagi shablonlardan qaysi biri yaratuvchi hisoblanadi?",
-    },
-    {
-      id: 383,
-      correct_answer: "A. fabrika",
-      quiz: "#Hech qanday mantiqni ko'rsatmasdan mijoz uchun namuna yaratadigan asosiy shablon nima?",
+        " Ralf Grisvold, Ivan Polonskiy va AT&T Bell Labsdan Devid Farberlar",
     },
     {
-      id: 384,
-      correct_answer: "A. fabrika usuli",
-      quiz: "#Subklasslar sinfni yaratish uchun interfeys bilan ta'minlaydigan loyihalashning yaratuvchi shabloni qaysi biri?",
+      quiz: "STL konteynerlari nechta kategoriyaga bo�linadi?",
+      correct_answer: " 3 ta ketma-ket, assosativ,adapter",
     },
     {
-      id: 385,
-      correct_answer:
-        "A. O'ziga xos loyihalash shabloni, o'zaro bog'liq yoki o'zaro bog'liq bo'lgan ob'ektlar oilalarini ularning maxsus sinflarini ko'rsatmasdan yaratish uchun interfeysni ta'minlaydi.",
-      quiz: "#Abstrakt fabrika shabloni nima?",
+      quiz: "STL ketma-ket konteynerlarini aniqlang?",
+      correct_answer: " forward_list, array, list, vector, deque",
     },
     {
-      id: 386,
-      correct_answer: "A. quruvchi",
-      quiz: "#Kompozit ob'ektni yaratish usulini ta'minlovchi loyihalashning yaratuvchi shabloni qaysi biri?",
+      quiz: "STL assosativ konteynerlarini aniqlang?",
+      correct_answer: " set, map, multimap, multiset",
     },
     {
-      id: 387,
-      correct_answer: "A. yagona ",
-      quiz: "#Yagona jarayonli ilovada sinfning yagona nusxasi mavjudligini ta'minlaydigan va ushbu namunaga global kirish nuqtasini ta'minlaydigan loyihalashning yaratuvchi shabloni qaysi biri?",
+      quiz: "STL adapter konteynerlarini aniqlang?",
+      correct_answer: " stack, queue,priohity_queue",
     },
     {
-      id: 388,
-      correct_answer: "A. tuzilmaviy shablonlar",
-      quiz: "#Sinflar va ob'ektlardan qanday qilib kattaroq tuzilmalar hosil bo'lishi haqidagi savolga javob beradigan loyihalash shabloni?",
+      quiz: "STL da iteratorlar nechta kategoriyaga bo�linadi ?",
+      correct_answer: "5 ta",
     },
     {
-      id: 389,
-      correct_answer: "A. bog‘lovchi komponovshik",
-      quiz: "#Quyidagi shablonlardan qaysi biri tuzilmaviy hisoblanadi?",
+      quiz: "Quydagi konteynerlardan capsity va reserve funksiyalari aniqlanmagan konteynerni aniqlang",
+      correct_answer: "deque",
     },
     {
-      id: 390,
-      correct_answer:
-        "A. maxsus yaratilgan interfeys orqali oʻzgartirish uchun mavjud boʻlmagan obyekt funksiyalaridan foydalanishni tashkil etish",
-      quiz: "#Adapter tuzilmaviy shabloni nima uchun mo'ljallangan?",
+      quiz: "Konteynerdan ixtiyoriy elementni o�chirish funksiyasi?",
+      correct_answer: "erase()",
     },
     {
-      id: 391,
-      correct_answer: "A. ko'prik",
-      quiz: "#Abstraktsiya va amalga oshirishni mustaqil ravishda o'zgartirishi uchun dasturiy ta'minotni loyihalashda foydalaniladigan strukturaviy dizayn namunasi?",
+      quiz: "STL konteynerlari da dastlabki elementga murojat qilish funksiyalarini aniqlang?",
+      correct_answer: " begin, cbegin",
     },
     {
-      id: 392,
+      quiz: "Iteratorlar nima uchun ishlatiladi",
       correct_answer:
-        "A. bir vaqtning oʻzida oddiy va murakkab obʼyektlardan iborat boʻlishi mumkin boʻlgan sinflar ierarxiyasi",
-      quiz: "#Loyihalashning tuzilmaviy shablonlaridan komponovshik nimani belgilaydi?",
-    },
-    {
-      id: 393,
-      correct_answer: "A. o’rinbosar",
-      quiz: "#Barcha chaqiruvlarni ushlab turish orqali boshqa ob'ektga kirishni boshqaradigan ob'ektni ta'minlovchi tuzilmaviy shablon (konteyner vazifasini bajaradi)?",
-    },
-    {
-      id: 394,
-      correct_answer: "A. xulq-atvorli shablonlari",
-      quiz: "#Turli ob'ektlar va sinflarning o'zaro ta'sirini amalga oshirish algoritmlari va usullarini belgilaydigan loyihalash shablonining nomi qanday?",
-    },
-    {
-      id: 395,
-      correct_answer: "A. ma’suliyatlar zanjiri",
-      quiz: "#Quyidagi modellardan qaysi biri xulq-atvor shablonidir?",
-    },
-    {
-      id: 396,
-      correct_answer: "A. ma’suliyatlar zanjiri",
-      quiz: "#Mas'uliyat darajasida tizimni tashkil qilish uchun xulq-atvor shabloni qaysi?",
+        "Iteratorlar konteynerlarda bir elementdan ikkinchisiga o'tish uchun ishlatiladi;",
     },
     {
-      id: 397,
-      correct_answer: "A. vositachi",
-      quiz: "#Ko'pgina ob'ektlarning o'zaro ta'sirida zaif bog'lanishni yaratish va ob'ektlarning bir-biriga aniq havola qilish zaruratini yo'q qilishga imkon beruvchi xulq-atvorli shablon?",
+      quiz: "C/C++ dasturlashda dinamik xotirani taqsimlash osonlashtirish uchun�<stdlib.h>�sarlavha�faylida�belgilangan C++ tomonidan taqdim etilgan kutubxona Funksiya lari :",
+      correct_answer: "malloc(), calloc(), free(), realloc();",
     },
     {
-      id: 398,
-      correct_answer:
-        "A. algoritmlar oilasini aniqlash, ularning har birini qamrab olish va ularning oʻzaro almashinishini taʼminlash.",
-      quiz: "#“Strategiya” xulq-atvor loyihalash shabloni nima uchun?",
+      quiz: "Ixtiyoriy kompilyator tarkibi nechta  qismdan iborat:",
+      correct_answer: "3ta",
     },
     {
-      id: 399,
-      correct_answer: "A. xotira",
-      quiz: "#Inkapsulatsiyani buzmasdan, ob'ektning ichki holatini keyinchalik o'sha holatga qaytarish uchun tuzatish va saqlash imkonini beruvchi xulq-atvorli loyihalash shabloni?",
+      quiz: "OYD qanday xossasi bir xil ierarxiyaning turli xil ob'ektlariga huddi birday munosabatda bo'lishga imkon beradi?",
+      correct_answer: "polimorfizm",
     },
     {
-      id: 400,
+      quiz: "Polimorfizm quyidagi mexanizmlar orqali amalga oshiriladi:",
       correct_answer:
-        "A. dasturni bajarish jarayonida obʼyekt oʻz holatiga qarab oʻz harakatini oʻzgartirishi kerak boʻlgan hollarda qoʻllaniladi",
-      quiz: "#Xolat xulq-atvori loyihalash shabloni qachon qo'llaniladi?",
-    },
-    {
-      id: 401,
-      correct_answer: "A. modul",
-      quiz: "#Muayyan nuqtai nazardan ko'rib chiqiladigan ixtiyoriy tizim, ob'ekt yoki jarayonning ma'lum tilda yoki grafik shaklda tasvirlanishi nima?",
+        "funktsiyalar, virtual funktsiyalar, shablonlarning haddan tashqari ko'payishi",
     },
     {
-      id: 402,
+      quiz: "Sinfga ta�rif bering?",
       correct_answer:
-        "A. Dasturiy ta'minot kontseptsiyasi ishlab chiqilgan paytdan boshlab va undan keyingi dasturiy ta'minotdan foydalanish mumkin bo'lmagan vaqtgacha tugaydigan vaqt davri",
-      quiz: "#Dasturning hayot sikli nima?",
+        "Sinflar - bu ma'lumotlar tuzilmalarining kengaytirilgan tushunchasidir: ma'lumotlar tuzilmalari singari ularda ma'lumotlar elementlari bo'lishi mumkin, ammo ular a'zolar vazifalarini ham o'z ichiga olishi mumkin. Ob'ekt - bu sinfni o'zlashtirish. O'zgaruvchilar nuqtai nazaridan, sinf bir turga, ob'ekt esa o'zgaruvchiga aylanadi.",
     },
     {
-      id: 403,
+      quiz: "Polimorfm sinf -",
       correct_answer:
-        "A. bu tizim xatti-harakatining xarakterli xususiyatlarini ishlab chiquvchining til tavsifi.",
-      quiz: "#Spetsifikatsiya nima?",
-    },
-    {
-      id: 404,
-      correct_answer: "A. dasturiy ta'minotning hayot sikli",
-      quiz: "#Dasturiy ta'minot tushunchasi paydo bo'lgan paytdan boshlab va undan keyingi dasturiy ta'minotdan foydalanish mumkin bo'lmagan vaqtgacha bo'lgan vaqt davri qanday nomlanadi:",
+        "tarkibida hech bo�lmaganda bitta virtual funksiyasi bo�lgan sinfga aytiladi",
     },
     {
-      id: 405,
-      correct_answer: "A. kaskadli",
-      quiz: "#Qaysi model loyiha davomida doimiy bo'lib qoladigan aniq belgilangan talablarni talab qiladi?",
+      quiz: "Abstrakt sinf  obyektini yaratish mumkinmi?",
+      correct_answer: "mumkin emas",
     },
     {
-      id: 406,
-      correct_answer: "A. metodologiya",
-      quiz: "#Tegishli loyihalarni amalga oshirishda modellarni qurish jarayonini belgilovchi dasturiy tizimlar va ilovalarni ishlab chiqish tamoyillari va usullari majmui qanday nomlanadi?",
+      quiz: "obyekt turini oshkor ravishda abstrakt sinf turiga keltirish mum�kinmi",
+      correct_answer: "mumkin emas",
     },
     {
-      id: 407,
-      correct_answer: "A. ma'lumotlarni qayta ishlash algoritmi",
-      quiz: "#Kelajakda tanlangan dasturlash muhitida amalga oshirilishi mumkin bo'lgan informatika muammosini hal qilish usulining tavsifi",
-    },
-    {
-      id: 408,
-      correct_answer:
-        "A. algoritmni tahlil qilishda hisobga olinadigan elementar amallar soni",
-      quiz: "#Algoritmning murakkabligi nimada?",
-    },
-    {
-      id: 409,
+      quiz: "Polimorfizm bu:",
       correct_answer:
-        "A. Bular ma’lumotlarni qayta ishlash texnikasi haqida tushunchaga ega bo‘lish uchun foydalaniladigan asosiy tamoyillar va metodologiyani belgilaydigan algoritmlardir.",
-      quiz: "#Ma'lumotlar tuzilmalari bilan ishlash algoritmlari qanday?",
-    },
-    {
-      id: 410,
-      correct_answer: "A. massivlar va fayllarni tartiblash algoritmlari",
-      quiz: "#Saralash algoritmlari nima?",
-    },
-    {
-      id: 411,
-      correct_answer: "A. satrlarni qayta ishlash algoritmlari",
-      quiz: "#Belgilar ketma-ketligini qayta ishlashning bir qancha usullarini o'z ichiga olgan algoritmlar qanday nomlanadi?",
+        "tegishli sinflar uchun xos bo'lgan amallarni ko'rsatish uchun bitta ismdan foydalanishga imkon beradigan vosita",
     },
     {
-      id: 412,
+      quiz: "Ob'ektga yo'naltirilgan dasturlashda polimorfizm amalga oshiriladi:",
       correct_answer:
-        "A. Grafik uchlari to‘plami va qirralar to‘plami (cho‘qqi juftlari orasidagi bog‘lanish) bo‘lgan mavhum matematik obyekt.",
-      quiz: "#Grafik nima?",
+        "qayta yuklash mexanizmlari (funktsiyalar va operatsiyalar), virtual funktsiyalar va shablonlar orqali",
     },
     {
-      id: 413,
-      correct_answer: "A. halqa(petlya)",
-      quiz: "#Chiqib ketadigan va bir xil cho'qqiga tushadigan chiziq nima deb ataladi?",
+      quiz: "OYD qanday xossasi bir xil ierarxiyaning turli xil ob'ektlariga huddi birday munosabatda bo'lishga imkon beradi?",
+      correct_answer: "polimorfizm",
     },
     {
-      id: 414,
+      quiz: "Polimorfizm quyidagi mexanizmlar orqali amalga oshiriladi:",
       correct_answer:
-        "A. grafning dastlabki berilgan bir choʻqqisidan qolgan barcha choʻqqilarga eng qisqa yoʻllarni topadi",
-      quiz: "#Dekstra algoritmi?",
+        "funktsiyalar, virtual funktsiyalar, shablonlarning haddan tashqari ko'payishi",
     },
     {
-      id: 415,
-      correct_answer: "A. kodni generasiya qilish",
-      quiz: "#Kompilyatorning maxsus qismi - kod generatori sintaktik jihatdan to'g'ri dasturni mashinada bajarilishi mumkin bo'lgan buyruqlar ketma-ketligiga aylantirganda kompilyatsiya jarayonining qismi qanday nomlanadi?",
+      quiz: "OOP holatida tuzilishning asosiy tamoyillari.",
+      correct_answer: "abstraksiya",
     },
     {
-      id: 416,
-      correct_answer: "A. rejalashtirish",
-      quiz: "#Konveyerli protsessorlarda dasturni bajarish tezligiga sezilarli ta'sir ko'rsatadigan optimallashtirish nima deyiladi?",
+      quiz: "Quyidagi metodologiyalardan qaysi biri OOPga tegishli?",
+      correct_answer: "komponentli dasturlash",
     },
     {
-      id: 417,
-      correct_answer: "A. algoritmik modellashtirish",
-      quiz: "#Loyihaning murakkabligining dasturiy mahsulotning qandaydir miqdoriy ko‘rsatkichiga bog‘liqligini aniqlashda avval tugallangan loyihalar bo‘yicha statistik ma’lumotlarni tahlil qilishga asoslangan usul qanday nomlanadi?",
+      quiz: "Imperativ yondashuvning asosiy usuli hisoblanadi?",
+      correct_answer: "protsessual dasturlash",
     },
     {
-      id: 418,
-      correct_answer: "A. ekspert xulosasi",
-      quiz: "#Yaratilgan dasturiy mahsulotni qo'llash sohasini biladigan dasturiy ta'minotni ishlab chiqish texnologiyasi bo'yicha bir necha mutaxassislardan so'rov qanday usulda o'tkaziladi?",
+      quiz: "Imperativ dasturlash qaysi tillardan foydalanadi?",
+      correct_answer: "past darajadagi tillar",
     },
     {
-      id: 419,
-      correct_answer: "A. analogiya boʻyicha baholash",
-      quiz: "#Rejalashtirilgan loyihani o'xshash xususiyatlarga ega oldingi loyihalar bilan solishtirishga qanday usul deyiladi?",
+      quiz: "Quyidagi dasturlash usullaridan qaysi biri imperativ paradigma bilan bog'liq?",
+      correct_answer: "funktsional",
     },
     {
-      id: 420,
+      quiz: "Imperativ dasturlash paradigmasi -",
       correct_answer:
-        "A. Turli ishlab chiqish guruhlarida o'lchamlarni va ishlashni o'lchash usullarini solishtirish qobiliyati",
-      quiz: "#O'lchov birligi sifatida LOC (Lines of Code) dan foydalanishning afzalliklari?",
-    },
-    {
-      id: 421,
-      correct_answer: "A. dasturiy ta'minot ko'rsatkichi",
-      quiz: "#Dasturiy ta'minotning ma'lum bir xususiyati yoki uning texnik xususiyatlarining raqamli qiymatini olish imkonini beruvchi o'lchov qanday nomlanadi?",
+        "Ushbu paradigma dastur holatini bosqichma-bosqich o'zgartiruvchi ko'rsatmalar ko'rinishidagi hisoblashlarning tavsiflarini o'z ichiga oladi.",
     },
     {
-      id: 422,
-      correct_answer: "A. tartibli shkala ",
-      quiz: "#Ba'zi xususiyatlarni mos yozuvlar qiymatlari bilan taqqoslash orqali tartiblash imkonini beradigan ko'rsatkichlar qaysi shkalaga mos keladi, ya'ni ushbu shkala bo'yicha o'lchov aniq dasturlarning nisbiy o'rnini aniqlaydi?",
+      quiz: "Mashinalardan qaysi biri protsessual dasturlash uchun nazariy model bo'lib xizmat qiladi?",
+      correct_answer: "Tyuring mashinasi",
     },
     {
-      id: 423,
-      correct_answer: "A. intervalli shkala",
-      quiz: "#Ular nafaqat dasturlarning nisbiy o'rnini, balki ular qanchalik uzoqda joylashganligini ham ko'rsatadigan ko'rsatkichlar qanday shkalaga mos keladi?",
-    },
-    {
-      id: 424,
-      correct_answer: "A. nisbiy shkala",
-      quiz: "#Nafaqat dasturlarni ma'lum bir tarzda tartibga solish va ularning bir-biriga nisbatan o'rnini baholash, balki tavsiflarni o'lchash mumkin bo'lgan chegaradan qanchalik uzoqligini aniqlash imkonini beradigan ko'rsatkichlar qaysi shkalaga mos keladi?",
-    },
-    {
-      id: 425,
+      quiz: "Kompyuterli dasturlash hamda umumiy dasturiy paradigmalari � ...",
       correct_answer:
-        "A. hayot siklining bosqichlari uchun ish jadvalini kuzatib borish va haqiqiy va rejalashtirilgan qiymatlarni solishtirish",
-      quiz: "#Hayotiy sikl ko'rsatkichi va calendar rejaning asosiy maqsadi nima?",
-    },
-    {
-      id: 426,
-      correct_answer: "A. loyihaning murakkablik omili",
-      quiz: "#Loyihaning barcha tashqi artefaktlarining umumiy hajmini har bir tashqi artefakt uchun aniqlangan murakkablik koeffitsientiga ko'paytiruvchi qiymat qanday nomlanadi?",
+        "amaliy, nazariy va funksional dasturlash paradigmalaridan iborat",
     },
     {
-      id: 427,
+      quiz: "Amaliy dasturlash � bu ...",
       correct_answer:
-        "A. loyihadagi jadvaldagi oʻzgarishlarni ularning yuzaga kelish ehtimolini hisobga olgan holda aks ettiruvchi umumiy qiymat (odam-soatlarda ifodalangan)",
-      quiz: "#Jadvalning umumiy xavfi nima?",
+        "kompyuterlar paydo b?�lishidan ancha oldin ?�rganilgan axborotni hisoblash va raqamlarni qayta ishlashning hisoblash jarayonlarini aks ettiradigan muammoli y?�nalishlarga b?�ysunadi",
     },
     {
-      id: 428,
-      correct_answer: "A. loyiha zichligi",
-      quiz: "#Rejadagi barcha ishlarning ketma-ket bajarilgandagi umumiy davomiyligining yig'indisining barcha rejalashtirilgan ishlar uchun ketgan vaqtning umumiy yig'indiga nisbati?",
+      quiz: "Assembler tilida mov operatori qanday vazifa bajaradi?",
+      correct_answer: "ma'lumotlarni bir joydan boshqasiga ko'chirish.",
     },
     {
-      id: 429,
-      correct_answer: "A. Inson, tashqi tizim",
-      quiz: "#Quyidagilarning qaysi biri UML platformasida “Actor” bo’lishi mumkin?",
+      quiz: "Assembler tilida ADD operatori qanday vazifa bajaradi?",
+      correct_answer: "ikkita qiymatni birga qo'shish.",
     },
     {
-      id: 430,
-      correct_answer: "A. Loyiha rejasining murakkabligi",
-      quiz: "#Har xil rejalashtirilgan ishlar o'rtasidagi munosabatlar va o'zaro bog'liqliklar soni barcha rejalashtirilgan ishlarning umumiy soniga tengligi nima deyiladi?",
-    },
-    {
-      id: 431,
-      correct_answer: "",
-      quiz: "#Umumiy byudjet bulan bog'liq xavfi nimaga teng??",
-    },
-    {
-      id: 432,
+      quiz: "Imperativ dasturlash paradigmasi bu�.",
       correct_answer:
-        "A. rejalashtirilgan ishlar o'rtasidagi munosabatlar va o'zaro bog'liqliklar soni va barcha rejalashtirilgan ishlarning umumiy soniga tegishli",
-      quiz: "#Loyiha rejasining murakkabligi nimada?",
+        "U holatni o'zgartirish orqali bosqichma-bosqich vazifani bajaradi.",
     },
     {
-      id: 433,
+      quiz: "Protsessual dasturlash paradigmasi bu�.",
       correct_answer:
-        "A. haqiqiy bajarilgan ish va rejalashtirilgan ish o'rtasidagi farq",
-      quiz: "#Calendar rejadagi farq nima?",
-    },
-    {
-      id: 434,
-      correct_answer: "A. rejaning bajarilishi",
-      quiz: "#Tugallangan ish uchun haqiqiy mehnat xarajatlarining ushbu ishlar uchun rejalashtirilgan mehnat xarajatlariga nisbati (rejalashtirilgan mehnat zichligi)?",
-    },
-    {
-      id: 435,
-      correct_answer: "A. rejadan orqada",
-      quiz: "#Rejada ko'rsatilgan topshiriqlarning o'z vaqtida bajarilmasligi nima deyiladi??",
-    },
-    {
-      id: 436,
-      correct_answer: "A. baholashning ishonchlilik omili",
-      quiz: "#Loyiha qiymati mahsulotining davomiyligi bo'yicha o'sib borayotgan rejalashtirish xatosining umumiy qiymatiga nisbati?",
-    },
-    {
-      id: 437,
-      correct_answer: "A. statik kod tahlili",
-      quiz: "#Dasturlarning dastlabki kodidagi xato va nuqsonlarni aniqlash jarayoni qanday nomlanadi?",
-    },
-    {
-      id: 438,
-      correct_answer: "A. testlash",
-      quiz: "#Dasturiy ta'minot natijalarini rejalashtirish, tayyorlash va baholash bilan bog'liq bo'lgan hayot siklining barcha bosqichlarini o'z ichiga olgan jarayon, ularga qo'yilgan talablarga javob berishini aniqlash, qo'yilgan maqsadga erishish uchun mos ekanligini ko'rsatish shuningdek, kamchiliklarni topish uchun belgilangan maqsad nima deyiladi?",
-    },
-    {
-      id: 439,
-      correct_answer: "A. statik testlash",
-      quiz: "#Dasturiy ta'minot kodini statik kod tahlilini bajarmasdan, spetsifikatsiya yoki amalga oshirish darajasida komponent yoki tizimni sinovdan o'tkazish qanday nomlanadi??",
-    },
-    {
-      id: 440,
-      correct_answer: "A. vizual modellashtirish",
-      quiz: "#Modellar yordamida real hayotdagi g'oyalar va muammolarni ifodalash usuli??",
-    },
-    {
-      id: 441,
-      correct_answer: "A. dekompozisiya",
-      quiz: "#Murakkab ob'ektni nisbatan mustaqil qismlarga ajratish jarayoni nima deyiladi?",
+        "Ushbu paradigma asosiy mashina modeli nuqtai nazaridan protseduraga urg'u beradi. Protsessual va imperativ yondashuv o'rtasida farq yo'q. U kodni qayta ishlatish qobiliyatiga ega va foydalanish mumkinligi bilan farq qiladi.",
     },
     {
-      id: 442,
-      correct_answer: "A. model",
-      quiz: "#Murakkab muammo yoki tuzilmaning kichik ahamiyatli detallariga e'tibor qaratmagan holda ifodaladigan va shu bilan uni yanada tushunarli qiladigan abstraksiya nima deyiladi?",
-    },
-    {
-      id: 443,
-      correct_answer: "A. batafsil loyihalash",
-      quiz: "#Arxitektura va amalga oshirish bosqichlaridan tashqari qolgan loyihalash ishlarining to'liq hajmi nima deyiladi?",
+      quiz: "Ob'ektga yo'naltirilgan dasturlash�.",
+      correct_answer:
+        "Eng kichik va eng asosiy ob'ekt bo'lib, barcha turdagi hisoblar faqat ob'ektlar ustida amalga oshiriladi. Jarayondan ko'ra ma'lumotlarga ko'proq e'tibor beriladi.",
     },
     {
-      id: 444,
+      quiz: "Parallel ishlov berish yondashuvi bu��.",
       correct_answer:
-        "A.\tIshlab chiqilayotgan tizim bilan o'zaro aloqada bo'ladigan foydalanuvchi yoki tashqi tizim",
-      quiz: "#UML platformasida “Actor” - bu?",
+        "bu dastur ko'rsatmalarini bir nechta protsessorlarga bo'lish orqali qayta ishlash.",
     },
     {
-      id: 445,
+      quiz: "Sof funktsiyalar bu�..",
       correct_answer:
-        "A.\tdasturiy ta'minot yoki apparatda mavjud bo’lgan barcha elementlar to'plami",
-      quiz: "#DTni loyihalash jarayonida uning harakteristikasini ifodalash uchun qaysi notatsiyalardan foydalaniladi?#2.\tTuzilma (structure) - bu?",
+        "bu dastur ko'rsatmalarini bir nechta protsessorlarga bo'lish orqali qayta ishlash. Faqat o'z kontekstini boshqaradigan va butun dasturning global kontekstiga (holatig ta'sir qilmaydigan kod bloklari.",
     },
     {
-      id: 446,
+      quiz: "Kompozit funksiyalar bu �..",
       correct_answer:
-        "A.\tmijozlar va serverlar A.\ttizim ta’minlashi lozim bo’lgan servislarning bayonoti ",
-      quiz: "#3.\tClient-server shablonida komponentlarga nimalar kiradi?#1.\tFunksional talablar-bu?",
+        "Bitta blok boshqasi tomonidan qaytarilgandan so�ng natijaga ta'sir qiladi.",
     },
   ];
-  console.log(data.length);
   const search = req.params.search;
 
   const result = data.filter((item) =>
