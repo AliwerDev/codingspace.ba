@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 router.get("/:search", fintQuestion);
 
-router.get("/user", (req, res) => {
-  res.send("user page");
-});
+// router.get("/user", (req, res) => {
+//   res.send("user page");
+// });
 module.exports = router;
